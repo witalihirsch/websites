@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+body {
+    background-image: url("../images/bg.png");
+    font-family: "Inter";
+    font-weight: 700;
+    font-style: normal;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+}
+
+.top-image {
+    width: 100%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.center-image {
+    width: 100%;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-image {
+    width: 100%;
+}
