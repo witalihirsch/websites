@@ -231,6 +231,7 @@ body {
     width: 50%;
     display: flex;
     gap: 5%;
+    justify-content: center;
 }
 
 .app-store {
@@ -291,6 +292,10 @@ body {
 @media screen and (max-width: 1200px) {
     html {
         font-size: 2vw;
+    }
+
+    .content {
+        padding: 0% 5%;
     }
 
     .header-text-logo {
