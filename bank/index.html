@@ -7,51 +7,101 @@
     <meta name="theme-color" content="#FDCFEE">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/slider.css" />
     <title>Bank</title>
 </head>
 
 <body>
-    <div class="content">
-        <div class="top-content">
-            <div class="header">
-                <div class="header-left">
-                    <div class="header-logo">
-                        <div class="header-text-logo">MasterCard</div>
-                        <img class="logo" src="images/logo.svg">
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-wrapper">
+                <div class="nav-left">
+                    <div class="nav-logo">
+                        <a class="nav-text-logo" href="">MasterCard</a>
+                        <img class="logo" src="images/logo.svg" alt="Logo">
                     </div>
-                    <div class="header-links-left">
-                        <div class="header-text" ontouchstart="">Home</div>
-                        <div class="header-text" ontouchstart="">Features</div>
-                        <div class="header-text" ontouchstart="">Pricing</div>
-                    </div>
+                    <ul class="nav-links-left">
+                        <li class="nav-text">
+                            <a class="nav-link" href="">Home</a>
+                        </li>
+                        <li class="nav-text">
+                            <a class="nav-link" href="">Features</a>
+                        </li>
+                        <li class="nav-text">
+                            <a class="nav-link" href="">Pricing</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="header-right">
-                    <div class="header-text" ontouchstart="">Personal</div>
-                    <div class="header-text" ontouchstart="">Business</div>
-                    <div class="header-button" ontouchstart="">Get App</div>
-                </div>
-                <div class="navbar-button" ontouchstart="">
-                    <img class="navbar-button-image" src="images/navbar-button.svg">
-                </div>
-            </div>
-            <div class="title">
-                <div class="title-top">
-                    <div class="title-text">
-                        <div class="title-text-top">Peaceful Shopping.</div>
-                        <div class="title-text-bottom">See how we can help with making your shopping experience and money management productively.</div>
-                    </div>
-                    <div class="title-image">
-                        <img class="cards" src="images/cards.png">
-                    </div>
-                </div>
-                <div class="title-bottom">
-                    <img class="app-store" src="images/app-store.svg" ontouchstart="">
-                    <img class="google-play" src="images/google-play.svg" ontouchstart="">
+                <ul class="nav-right">
+                    <li class="nav-text">
+                        <a class="nav-link" href="">Personal</a>
+                    </li>
+                    <li class="nav-text">
+                        <a class="nav-link" href="">Business</a>
+                    </li>
+                    <li class="nav-button">
+                        <a class="nav-link-button" href="">Get App</a>
+                    </li>
+                </ul>
+                <div class="nav-menu" ontouchstart="">
+                    <img class="navbar-button-image" src="images/navbar-button.svg" alt="Menu">
                 </div>
             </div>
         </div>
-    </div>
+    </header>
+    <main class="main">
+        <div class="wrapper">
+            <div class="slides">
+                <div class="top-content">
+                    <div class="top-content-left">
+                        <div class="title">
+                            <div class="title-top">Peaceful Shopping.</div>
+                            <div class="title-bottom">See how we can help with making your shopping experience and money management productively.</div>
+                        </div>
+                        <div class="markets">
+                            <a class="market" href="">
+                                <img class="market-image" src="images/app-store.svg" alt="App Store">
+                            </a>
+                            <a class="market" href="">
+                                <img class="market-image" src="images/google-play.svg" alt="Google Play">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="top-content-right">
+                        <img class="cards" src="images/cards.png" alt="Cards">
+                    </div>
+                </div>
+                <div class="center-content">
+                    <div class="center-content-top">
+                        <div class="center-top-text">Buy with your Phone!</div>
+                        <div class="pays">
+                            <a class="pay" href="">
+                                <img class="pay-image" src="images/apple-pay.svg" alt="Apple Pay">
+                            </a>
+                            <a class="pay" href="">
+                                <img class="pay-image" src="images/google-pay.svg" alt="Google Pay">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="center-content-bottom">
+                        <div class="center-left">
+                            <img class="device" src="images/device.png" alt="Device">
+                        </div>
+                        <div class="center-right">
+                            <div class="center-right-top-text">All Operations in one App</div>
+                            <div class="center-right-bottom-text">Lorem ipsum dolor sit amet consectetur. Posuere sit tristique at dictum enim consequat. Neque sed nulla urna rhoncus. Ac proin sagittis non metus vel. Enim iaculis malesuada laoreet cum nulla lorem in consectetur. Vel tortor dui varius sit. Parturient proin vitae vitae sem amet. Magna non hendrerit nulla nunc sagittis euismod libero in.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/slider.js"></script>
+    <script>
+    var mySlider = slider('.slides');
+    </script>
 </body>
 
 </html>
