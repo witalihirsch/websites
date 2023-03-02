@@ -356,6 +356,8 @@ body {
 
 /*MEDIA REQUESTS*/
 
+/*PORTRAIT*/
+
 @media (max-width: 1200px) {
 
     html,
@@ -425,7 +427,7 @@ body {
 
     .nav-left ul li,
     .nav-right ul li {
-        margin-bottom: 4vh;
+        line-height: 2.5;
         margin-right: 0;
     }
 
@@ -435,7 +437,7 @@ body {
 
     .nav-link-button {
         font-size: 3rem;
-        line-height: 2.5;
+        line-height: 2;
         border: 0;
         background-color: #000;
         color: #fff;
@@ -608,6 +610,14 @@ body {
         font-size: 14px;
     }
 
+    .navbar {
+        height: 65px;
+    }
+
+    .navbar-wrapper {
+        padding: 10px 20px;
+    }
+
     .nav-burger {
         border: 0.25rem solid rgba(0, 0, 0, 0.5);
         border-radius: 0.5rem;
@@ -625,6 +635,11 @@ body {
         bottom: 0.5rem;
     }
 
+    .top-content {
+        min-height: calc(100vh - 30px);
+        margin-top: 30px;
+    }
+
     .title-left-title {
         max-width: 350px;
     }
@@ -633,5 +648,71 @@ body {
         border: 0.25rem solid rgba(0, 0, 0, 0.5);
         border-radius: 0.8rem;
         padding: 0.6rem 0.8rem;
+    }
+}
+
+
+
+/*LANDSCAPE*/
+
+@media (max-width: 992px) and (orientation: landscape) {
+
+    html,
+    body {
+        font-size: 17px;
+    }
+
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar-wrapper {
+        padding: 5px 20px;
+    }
+
+    .nav.active {
+        flex-direction: row;
+    }
+
+    .nav-left {
+        margin-right: 8vw;
+        height: 50vh;
+    }
+
+    .nav-right {
+        height: 50vh;
+    }
+
+    .nav-link-button {
+        font-size: 2rem;
+    }
+
+    .nav-menu span {
+        height: 3px;
+        top: 9px;
+    }
+
+    .nav-menu:before,
+    .nav-menu:after {
+        height: 3px;
+    }
+
+    .container {
+        max-width: 750px;
+    }
+
+    .top-content {
+        min-height: calc(100vh - 70px);
+        margin-top: 70px;
+    }
+
+    .title-right {
+        width: 75%;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+    .nav-link-button {
+        font-size: 1.5rem;
     }
 }
