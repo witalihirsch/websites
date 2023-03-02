@@ -46,8 +46,8 @@ body {
     user-select: none;
     height: 100%;
     color: #000;
-    background: #FDCFEE;
     background: linear-gradient(0deg, rgba(253, 207, 238, 1) 0%, rgba(175, 248, 255, 1) 50%, rgba(253, 207, 238, 1) 100%);
+    background-color: #FDCFEE;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -636,8 +636,8 @@ body {
     }
 
     .top-content {
-        min-height: calc(100vh - 30px);
-        margin-top: 30px;
+        min-height: calc(100vh - 25px);
+        margin-top: 25px;
     }
 
     .title-left-title {
