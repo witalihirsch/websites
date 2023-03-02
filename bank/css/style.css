@@ -51,6 +51,10 @@ body {
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .wrapper {
