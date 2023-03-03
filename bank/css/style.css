@@ -69,7 +69,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 6rem;
     backdrop-filter: blur(2rem);
     -webkit-backdrop-filter: blur(2rem);
 }
@@ -78,7 +78,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 0.625rem 0.8rem;
 }
 
 .nav-logo {
@@ -208,10 +208,10 @@ body {
 /*TOP CONTENT*/
 
 .top-content {
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 6rem);
     display: flex;
     padding: 0 10px;
-    margin-top: 100px;
+    margin-top: 6rem;
 }
 
 .container {
@@ -241,14 +241,14 @@ body {
 }
 
 .title-left-title {
-    max-width: 600px;
+    max-width: 80%;
     font-size: 4.5rem;
     line-height: 1;
     margin-bottom: 3rem;
 }
 
 .title-left-text {
-    max-width: 600px;
+    max-width: 95%;
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -338,17 +338,12 @@ body {
 /*FOOTER*/
 
 .content-body {
-    max-width: 1400px;
     margin: 0 auto;
-    padding: 25px;
+    padding: 10px;
 }
 
 .content-body p {
-    margin: 0 0 20px 0;
-}
-
-.content-body p:last-child {
-    margin: 0;
+    font-size: 1.5rem;
 }
 
 
@@ -357,7 +352,7 @@ body {
 
 /*PORTRAIT*/
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (orientation: portrait) {
 
     html,
     body {
@@ -369,7 +364,7 @@ body {
     }
 
     .navbar {
-        height: 90px;
+        /*height: 90px;*/
     }
 
     .navbar.active {
@@ -427,7 +422,7 @@ body {
     .nav-left ul li,
     .nav-right ul li {
         font-size: 3rem;
-        line-height: 2.5;
+        line-height: 10vh;
         margin-right: 0;
     }
 
@@ -492,26 +487,16 @@ body {
         transform: scale(0);
     }
 
-    .top-content {
-        display: flex;
-        min-height: calc(100vh - 90px);
-        margin-top: 90px;
-    }
-
     .container {
         max-width: 970px;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) and (orientation: portrait) {
 
     html,
     body {
         font-size: 0.8em;
-    }
-
-    .navbar {
-        height: 80px;
     }
 
     .nav-menu span {
@@ -527,22 +512,13 @@ body {
     .container {
         max-width: 750px;
     }
-
-    .top-content {
-        min-height: calc(100vh - 80px);
-        margin-top: 80px;
-    }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
 
     html,
     body {
         font-size: 0.7em;
-    }
-
-    .navbar {
-        height: 75px;
     }
 
     .nav {
@@ -579,22 +555,18 @@ body {
     }
 
     .container {
-        max-width: none;
+        max-width: 550px;
         flex-direction: column;
     }
 
-    .top-content {
-        min-height: calc(100vh - 75px);
-        margin-top: 75px;
+    .title-left {
+        max-width: 80%;
+        align-self: center;
     }
 
     .title-left-top {
         text-align: center;
         align-items: center;
-    }
-
-    .title-left-title {
-        max-width: 450px;
     }
 
     .title-left-bottom {
@@ -607,21 +579,22 @@ body {
         border-radius: 1.8rem;
         padding: 1.2rem 1.5rem;
     }
+
+    .title-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        max-width: 80%;
+    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) and (orientation: portrait) {
 
     html,
     body {
         font-size: 0.6em;
-    }
-
-    .navbar {
-        height: 65px;
-    }
-
-    .navbar-wrapper {
-        padding: 10px 20px;
     }
 
     .nav-left ul li,
@@ -650,13 +623,12 @@ body {
         bottom: 0.8rem;
     }
 
-    .top-content {
-        min-height: calc(100vh - 25px);
-        margin-top: 25px;
+    .container {
+        max-width: none;
     }
 
-    .title-left-title {
-        max-width: 350px;
+    .title-left {
+        max-width: 90%;
     }
 
     .market img {
@@ -664,18 +636,22 @@ body {
         border-radius: 1.2rem;
         padding: 0.9rem 1.2rem;
     }
+
+    .title-right {
+        max-width: 90%;
+    }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 400px) and (orientation: portrait) {
 
     html,
     body {
-        font-size: 0.4em;
+        font-size: 0.5em;
     }
 
     .nav-menu span {
         height: 2px;
-        top: 5px;
+        top: 7px;
     }
 
     .nav-menu:before,
@@ -692,51 +668,174 @@ body {
         height: 2px;
         bottom: 0.8rem;
     }
-
-    .title-left-title {
-        max-width: 250px;
-    }
 }
 
 
 
 /*LANDSCAPE*/
 
+@media (max-width: 1200px) and (orientation: landscape) {
+
+    html,
+    body {
+        font-size: 0.9em;
+    }
+
+    body.active {
+        overflow: hidden;
+    }
+
+    .navbar.active {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        height: 0;
+    }
+
+    .nav-logo.active {
+        transform: scale(0);
+    }
+
+    .nav {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(6rem);
+        -webkit-backdrop-filter: blur(6rem);
+        overflow: auto;
+        font-size: 3rem;
+    }
+
+    .nav.active {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        top: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .nav-left {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin-right: 8vw;
+        height: 60vh;
+    }
+
+    .nav-right {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        height: 60vh;
+    }
+
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+    }
+
+    .nav-left ul li,
+    .nav-right ul li {
+        font-size: 3rem;
+        line-height: 10vw;
+        margin-right: 0;
+    }
+
+    .nav-button:active {
+        transform: scale(0.85);
+    }
+
+    .nav-link-button {
+        font-size: 4.5rem;
+        line-height: 2;
+        border: 0;
+        background-color: #000;
+        color: #fff;
+        border-radius: 1.5rem;
+        padding: 1.5rem 2.25rem;
+    }
+
+    .nav-link-button:hover {
+        background-color: #101010;
+    }
+
+    .nav-link-button:active {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .nav-burger {
+        display: block;
+        position: relative;
+    }
+
+    .nav-menu span {
+        height: 4px;
+        top: 12px;
+    }
+
+    .nav-menu:before,
+    .nav-menu:after {
+        height: 4px;
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+
+    .nav-menu.active:before {
+        transform: rotate(45deg);
+        top: 0.8rem;
+    }
+
+    .nav-menu.active:after {
+        transform: rotate(-45deg);
+        bottom: 0.8rem;
+    }
+
+    .nav-menu.active span {
+        transform: scale(0);
+    }
+
+    .wrapper.active {
+        transition: 0.3s;
+        transform: scale(0);
+    }
+
+    .container {
+        max-width: 970px;
+    }
+
+    .title-left-title {
+        max-width: 80%;
+        font-size: 4.5rem;
+        line-height: 1;
+        margin-bottom: 2rem;
+    }
+
+    .title-left-text {
+        max-width: 95%;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
 @media (max-width: 992px) and (orientation: landscape) {
 
     html,
     body {
-        font-size: 0.7em;
-    }
-
-    .navbar {
-        height: 70px;
-    }
-
-    .navbar-wrapper {
-        padding: 5px 20px;
-    }
-
-    .nav.active {
-        flex-direction: row;
-    }
-
-    .nav-left {
-        margin-right: 8vw;
-        height: 50vh;
-    }
-
-    .nav-right {
-        height: 50vh;
-    }
-
-    .nav-link-button {
-        font-size: 4rem;
+        font-size: 0.6em;
     }
 
     .nav-menu span {
         height: 3px;
-        top: 9px;
+        top: 8px;
     }
 
     .nav-menu:before,
@@ -748,18 +847,37 @@ body {
         max-width: 750px;
     }
 
-    .top-content {
-        min-height: calc(100vh - 70px);
-        margin-top: 70px;
-    }
-
     .title-right {
-        width: 75%;
+        width: 65%;
     }
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
+
+    html,
+    body {
+        font-size: 0.5em;
+    }
+
+    .nav-menu span {
+        height: 2px;
+        top: 7px;
+    }
+
+    .nav-menu:before,
+    .nav-menu:after {
+        height: 2px;
+    }
+
     .nav-link-button {
         font-size: 2.5rem;
+    }
+
+    .title-left-bottom {
+        width: 90%;
+    }
+
+    .title-right {
+        width: 65%;
     }
 }
