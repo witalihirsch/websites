@@ -486,6 +486,7 @@ body.active {
     font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 600;
     margin-bottom: calc(16px + (32 - 16) * ((100vw - 320px) / (1920 - 320)));
+    color: #000;
     transition: 0.2s;
 }
 
@@ -538,6 +539,7 @@ body.active {
 
 .theme-light,
 .theme-dark {
+    color: #000;
     background-color: transparent;
 }
 
