@@ -393,14 +393,15 @@ body.active {
 }
 
 .device-title {
-    font-size: calc(16px + (48 - 16) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
     line-height: 1;
     margin: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320))) 0;
 }
 
 .device-text {
-    font-size: calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
     line-height: 1.5;
+    text-align: justify;
 }
 
 .center-content-bottom {
