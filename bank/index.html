@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#FDCFEE">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/card.css" />
     <title>Bank</title>
 </head>
 
@@ -113,8 +114,13 @@
                                 <input type="input" name="phone-number" ontouchstart="">
                             </div>
                         </div>
-                        <div class="data-right">
-                            <img src="images/card.png" alt="Device">
+                        <div class="box">
+                            <div class="card"></div>
+                            <div class="card-chip"></div>
+                            <div class="card-name">Name</div>
+                            <div class="card-year">07/25</div>
+                            <div class="card-num">1234 5678 9123 4567</div>
+                            <div class="card-mastercard"></div>
                         </div>
                     </div>
                 </div>
@@ -124,7 +130,7 @@
     <footer class="footer">
         <div class="container-row">
             <div class="footer-section">
-                <button class="footer-title" id="socials-title"ontouchstart="">Socials</button>
+                <button class="footer-title" id="socials-title" ontouchstart="">Socials</button>
                 <div class="socials">
                     <img src="images/linkedin.svg" alt="LinkedIn">
                     <img src="images/youtube.svg" alt="Youtube">
@@ -160,6 +166,17 @@
     </footer>
     <script type="text/javascript" src="js/burger.js"></script>
     <script type="text/javascript" src="js/accordion.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    VanillaTilt.init(document.querySelector(".box"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.3,
+        scale: 1.1,
+
+    });
+    </script>
 </body>
 
 </html>

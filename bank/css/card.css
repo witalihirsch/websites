@@ -1,0 +1,156 @@
+.box {
+    position: relative;
+    border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
+    transform-style: preserve-3d;
+}
+
+.box .card {
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    width: calc(272px + (545 - 272) * ((100vw - 320px) / (1920 - 320)));
+    min-height: calc(165px + (330 - 165) * ((100vw - 320px) / (1920 - 320)));
+    backdrop-filter: blur(6rem);
+    -webkit-backdrop-filter: blur(6rem);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0.5);
+    border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
+    box-shadow: 0 calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320))) calc(22px + (44 - 22) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0.05);
+    transform-style: preserve-3d;
+}
+
+.card-chip {
+    position: absolute;
+    top: 7%;
+    left: 5%;
+    width: calc(35px + (70 - 35) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
+    background: rgba(255, 255, 255, 0);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
+    border-radius: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320)));
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.card-chip::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(../images/chip.svg);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.box:hover .card-chip {
+    top: -4%;
+    left: -3%;
+    width: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateZ(calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320))));
+    backdrop-filter: blur(6rem);
+    -webkit-backdrop-filter: blur(6rem);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0.5);
+    border-radius: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320)));
+    box-shadow: 0 calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320))) calc(22px + (44 - 22) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0.5);
+}
+
+.card-name {
+    position: absolute;
+    top: 11%;
+    left: 20%;
+    font-size: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.box:hover .card-name {
+    top: 6%;
+    left: 25%;
+    transform: translateZ(calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.card-year {
+    position: absolute;
+    top: initial;
+    bottom: 16%;
+    left: 5%;
+    font-size: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.box:hover .card-year {
+    top: initial;
+    bottom: 21%;
+    left: 10%;
+    transform: translateZ(calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.card-num {
+    position: absolute;
+    top: initial;
+    bottom: 7%;
+    left: 5%;
+    font-size: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.box:hover .card-num {
+    top: initial;
+    bottom: 12%;
+    left: 10%;
+    transform: translateZ(calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.card-name::before,
+.card-year::before,
+.card-num::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.card-mastercard {
+    position: absolute;
+    top: initial;
+    left: initial;
+    right: 5%;
+    bottom: 7%;
+    width: calc(52px + (105 - 52) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(35px + (70 - 35) * ((100vw - 320px) / (1920 - 320)));
+    background: rgba(255, 255, 255, 0);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
+    border-radius: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320)));
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.card-mastercard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(../images/card-mastercard.svg);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.box:hover .card-mastercard {
+    top: initial;
+    left: initial;
+    right: -3%;
+    bottom: -4%;
+    width: calc(55px + (110 - 55) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(55px + (110 - 55) * ((100vw - 320px) / (1920 - 320)));
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateZ(calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320))));
+    backdrop-filter: blur(6rem);
+    -webkit-backdrop-filter: blur(6rem);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0.5);
+    border-radius: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320)));
+    box-shadow: 0 calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320))) calc(22px + (44 - 22) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0.5);
+}

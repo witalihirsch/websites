@@ -406,6 +406,7 @@ body.active {
 
 .center-content-bottom {
     margin-bottom: calc(16px + (32 - 16) * ((100vw - 320px) / (1920 - 320)));
+    margin-right: calc(32px + (64 - 32) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .data {
@@ -444,7 +445,7 @@ body.active {
 }
 
 .inputs input {
-    width: 65%;
+    width: 100%;
     border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0.5);
     border-radius: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320)));
     padding: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320))) calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
@@ -454,15 +455,6 @@ body.active {
 
 .inputs input[type=input] {
     font-size: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
-    ;
-}
-
-.data-right {
-    width: 100%;
-}
-
-.data-right img {
-    max-width: 100%;
 }
 
 
