@@ -68,6 +68,7 @@
 }
 
 .box:hover .card-name {
+    color: #000;
     top: 7%;
     left: 28%;
     transform: translateZ(calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320))));
@@ -86,6 +87,7 @@
 }
 
 .box:hover .card-year {
+    color: #000;
     top: initial;
     bottom: 21%;
     left: 10%;
@@ -105,6 +107,7 @@
 }
 
 .box:hover .card-num {
+    color: #000;
     top: initial;
     bottom: 12%;
     left: 10%;
