@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/card.css" />
+    <link rel="shortcut icon" type="image/svg" href="images/logo.svg">
     <title>Bank</title>
 </head>
 
@@ -15,8 +16,8 @@
     <header class="navbar">
         <div class="navbar-wrapper">
             <div class="nav-logo">
-                <a class="nav-text-logo" href="" ontouchstart="">MasterCard</a>
-                <img src="images/logo.svg" alt="Logo">
+                <a class="nav-text-logo" href="" ontouchstart="">Bank</a>
+                <img src="images/bank.svg" alt="Logo">
             </div>
             <div class="nav">
                 <div class="nav-left">
@@ -175,6 +176,11 @@
         "max-glare": 0.3,
         scale: 1.1,
 
+    });
+
+    VanillaTilt.init(document.querySelector(".title-right"), {
+        max: 15,
+        speed: 400,
     });
     </script>
 </body>

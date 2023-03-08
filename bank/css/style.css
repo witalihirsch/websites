@@ -43,10 +43,11 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    height: 100%;
+    min-height: 100%;
     color: #000;
     background: linear-gradient(0deg, rgba(253, 207, 238, 1) 0%, rgba(175, 248, 255, 1) 50%, rgba(253, 207, 238, 1) 100%);
     background-color: #FDCFEE;
+    background-repeat: no-repeat;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -72,8 +73,8 @@ body.active {
     left: 0;
     width: 100%;
     height: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(calc(1rem + (2 - 1) * ((100vw - 320px) / (1920 - 320))));
+    -webkit-backdrop-filter: blur(calc(1rem + (2 - 1) * ((100vw - 320px) / (1920 - 320))));
 }
 
 .navbar-wrapper {
@@ -96,7 +97,7 @@ body.active {
 }
 
 .nav-logo img {
-    max-width: calc(60px + (120 - 60) * ((100vw - 320px) / (1920 - 320)));
+    max-width: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .nav {
@@ -649,8 +650,12 @@ body.active {
         margin-right: 0;
     }
 
+    .nav-button:hover {
+        transform: scale(1.1);
+    }
+
     .nav-button:active {
-        transform: scale(0.85);
+        transform: scale(0.9);
     }
 
     .nav-link-button {
@@ -679,10 +684,6 @@ body.active {
     .wrapper.active {
         transition: 0.3s;
         transform: scale(0);
-    }
-
-    .top-content {
-        padding-bottom: 4rem;
     }
 
     .title-left {
@@ -746,6 +747,7 @@ body.active {
 
     .center-content-bottom {
         max-width: 80%;
+        margin-right: 0;
     }
 
     .data {
@@ -860,6 +862,10 @@ body.active {
         overflow: auto;
     }
 
+    .navbar-wrapper {
+        padding: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320))) calc(32px + (64 - 32) * ((100vw - 320px) / (1920 - 320)));
+    }
+
     .nav.active {
         width: 100%;
         justify-content: center;
@@ -900,8 +906,12 @@ body.active {
         margin-right: 0;
     }
 
+    .nav-button:hover {
+        transform: scale(1.1);
+    }
+
     .nav-button:active {
-        transform: scale(0.85);
+        transform: scale(0.9);
     }
 
     .nav-link-button {
