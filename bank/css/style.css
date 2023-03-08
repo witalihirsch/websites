@@ -39,10 +39,6 @@ div {
 
 html,
 body {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     min-height: 100%;
     color: #000;
     background: linear-gradient(0deg, rgba(253, 207, 238, 1) 0%, rgba(175, 248, 255, 1) 50%, rgba(253, 207, 238, 1) 100%);
@@ -57,10 +53,84 @@ body.active {
     overflow: hidden;
 }
 
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .wrapper {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+
+
+/*SCROLLBAR*/
+
+/*firefox*/
+:root {
+    scrollbar-color: #252525 transparent !important;
+    scrollbar-width: auto !important;
+}
+
+/*others*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 99px;
+    -moz-border-radius: 99px;
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+    background-color: #252525;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border: 2px solid transparent;
+    background-color: #252525;
+}
+
+::-webkit-scrollbar-thumb:active {
+    border: 2px solid transparent;
+    background-clip: content-box;
+    background-color: #575757;
+}
+
+
+
+/*SELECTION*/
+
+::selection {
+    background-color: #000000;
+    color: white;
+}
+
+
+
+/*CURSOR*/
+
+body,
+a,
+button {
+    cursor: url('../images/cursor.svg'), default;
+}
+
+a:hover,
+button:hover,
+input {
+    cursor: url('../images/cursor-hover.svg'), default;
+}
+
+body:active,
+a:active,
+button:active,
+input:active {
+    cursor: url('../images/cursor-active.svg'), default;
 }
 
 
@@ -485,20 +555,76 @@ body.active {
 }
 
 .socials {
+    width: calc(100px + (200 - 100) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(100px + (200 - 100) * ((100vw - 320px) / (1920 - 320)));
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    position: relative;
 }
 
-.socials img {
-    max-width: 100%;
-    margin: calc(8px + (16 - 8) * ((100vw - 320px) / (1920 - 320)));
+.linkedin {
+    max-width: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.linkedin:hover {
+    transform: scale(1.1);
+    filter: invert(29%) sepia(75%) saturate(1385%) hue-rotate(175deg) brightness(93%) contrast(98%);
+}
+
+.linkedin:active {
+    transform: scale(0.9);
+    filter: invert(18%) sepia(97%) saturate(995%) hue-rotate(174deg) brightness(94%) contrast(101%);
+    transition: 0.2s;
+}
+
+.youtube {
+    max-width: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
+    position: absolute;
+    right: 0;
+    top: 25%;
+
+}
+
+.youtube:hover {
+    transform: scale(1.1);
+    filter: invert(26%) sepia(82%) saturate(6950%) hue-rotate(354deg) brightness(86%) contrast(124%);
+}
+
+.youtube:active {
+    transform: scale(0.9);
+    filter: invert(13%) sepia(69%) saturate(5449%) hue-rotate(356deg) brightness(81%) contrast(112%);
+    transition: 0.2s;
+}
+
+.twitter {
+    max-width: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.twitter:hover {
+    transform: scale(1.1);
+    filter: invert(54%) sepia(17%) saturate(6377%) hue-rotate(179deg) brightness(90%) contrast(98%);
+}
+
+.twitter:active {
+    transform: scale(0.9);
+    filter: invert(30%) sepia(96%) saturate(809%) hue-rotate(173deg) brightness(89%) contrast(93%);
+    transition: 0.2s;
 }
 
 .footer-section ul li {
     text-align: left;
     font-size: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
     margin-bottom: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.footer-section ul li a {
     color: rgba(0, 0, 0, 0.5);
     transition: 0.2s;
 }
@@ -565,14 +691,14 @@ body.active {
 }
 
 .nav-link:hover,
-.footer-section ul li:hover,
+.footer-section ul li a:hover,
 .nav-link:focus,
-.footer-section ul li:focus {
+.footer-section ul li a:focus {
     color: #000000;
 }
 
 .nav-link:active,
-.footer-section ul li:active {
+.footer-section ul li a:active {
     color: rgba(0, 0, 0, 0.5);
 }
 
