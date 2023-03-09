@@ -65,6 +65,7 @@ img {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 
@@ -447,7 +448,6 @@ input:active {
     padding: calc(16px + (32 - 16) * ((100vw - 320px) / (1920 - 320)));
     z-index: 1;
     position: relative;
-    overflow: hidden;
 }
 
 .ellipse-center {
@@ -613,7 +613,6 @@ input:active {
     background-color: rgba(255, 255, 255, 0.4);
     z-index: 1;
     position: relative;
-    overflow: hidden;
 }
 
 .ellipse-bottom {
