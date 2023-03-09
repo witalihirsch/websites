@@ -566,7 +566,7 @@ input:active {
 
 .center-content-bottom {
     margin-bottom: calc(16px + (32 - 16) * ((100vw - 320px) / (1920 - 320)));
-    margin-right: calc(32px + (64 - 32) * ((100vw - 320px) / (1920 - 320)));
+    margin-right: calc(16px + (64 - 16) * ((100vw - 320px) / (1920 - 320)));
     z-index: 1;
 }
 
@@ -581,7 +581,7 @@ input:active {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-right: calc(32px + (64 - 32) * ((100vw - 320px) / (1920 - 320)));
+    margin-right: calc(16px + (64 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .inputs {
@@ -644,7 +644,7 @@ input:active {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320))) calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
+    padding: calc(8px + (48 - 8) * ((100vw - 320px) / (1920 - 320))) calc(8px + (48 - 8) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .footer-title {
@@ -910,7 +910,7 @@ input:active {
     }
 
     .wrapper.active {
-        transition: 0s;
+        transition: 0.3s;
         transform: scale(0);
     }
 
@@ -937,7 +937,7 @@ input:active {
     }
 
     .footer.active {
-        transition: 0s;
+        transition: 0.3s;
         transform: scale(0);
     }
 }
@@ -1015,7 +1015,7 @@ input:active {
     }
 
     .footer-section:last-child {
-        padding-bottom: calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
+        padding-bottom: calc(8px + (48 - 8) * ((100vw - 320px) / (1920 - 320)));
     }
 
     .footer-title:hover {
@@ -1179,7 +1179,7 @@ input:active {
     }
 
     .wrapper.active {
-        transition: 0s;
+        transition: 0.3s;
         transform: scale(0);
     }
 
@@ -1193,7 +1193,7 @@ input:active {
     }
 
     .footer.active {
-        transition: 0s;
+        transition: 0.3s;
         transform: scale(0);
     }
 }
