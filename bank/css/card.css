@@ -1,5 +1,6 @@
-::-webkit-autofill {
-    color: #000;
+::-webkit-autofill,
+autofill {
+    color: #000 !important;
 }
 
 .box {
