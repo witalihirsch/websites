@@ -1,9 +1,9 @@
-<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_b_51_2)">
-<rect width="30" height="30" rx="15" fill="black" fill-opacity="0.5"/>
+<rect width="25" height="25" rx="12.5" fill="black" fill-opacity="0.6"/>
 </g>
 <defs>
-<filter id="filter0_b_51_2" x="-200" y="-200" width="430" height="430" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_b_51_2" x="-200" y="-200" width="425" height="425" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feGaussianBlur in="BackgroundImageFix" stdDeviation="100"/>
 <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_51_2"/>
