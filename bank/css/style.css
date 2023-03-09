@@ -221,7 +221,6 @@ input:active {
 
 .nav-button {
     transition: 0.2s;
-    cursor: pointer;
 }
 
 .nav-link-button {
@@ -238,7 +237,6 @@ input:active {
     padding: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320))) calc(4px + (8 - 4) * ((100vw - 320px) / (1920 - 320)));
     border-radius: calc(7px + (14 - 7) * ((100vw - 320px) / (1920 - 320)));
     transition: 0.2s;
-    cursor: pointer;
 }
 
 .nav-menu {

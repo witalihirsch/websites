@@ -1,4 +1,4 @@
-input:-webkit-autofill {
+::-webkit-autofill {
     color: #000;
 }
 
