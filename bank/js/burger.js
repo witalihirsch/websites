@@ -5,6 +5,7 @@ var navLogo = document.querySelector(".nav-logo");
 var nav = document.querySelector(".nav");
 var navMenu = document.querySelector(".nav-menu");
 var wrapper = document.querySelector(".wrapper");
+var footer = document.querySelector(".footer");
 
 navBurger.addEventListener("click", function() {
     body.classList.toggle('active');
@@ -13,4 +14,5 @@ navBurger.addEventListener("click", function() {
     nav.classList.toggle("active");
     navMenu.classList.toggle("active");
     wrapper.classList.toggle("active");
+    footer.classList.toggle("active");
 });
