@@ -47,13 +47,13 @@
     left: 8%;
     width: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
     height: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
-    background: rgba(0, 0, 0, 0.1);
-    transform: translateZ(calc(26px + (80 - 26) * ((100vw - 320px) / (1920 - 320))));
+    background: rgba(0, 0, 0, 0);
+    transform: translateZ(calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320))));
     backdrop-filter: blur(6rem);
     -webkit-backdrop-filter: blur(6rem);
-    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0.3);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
     border-radius: calc(4px + (12 - 4) * ((100vw - 320px) / (1920 - 320)));
-    box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0.5);
+    box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0);
 }
 
 .card-name {
@@ -150,13 +150,13 @@
     bottom: 7%;
     width: calc(36px + (110 - 36) * ((100vw - 320px) / (1920 - 320)));
     height: calc(36px + (110 - 36) * ((100vw - 320px) / (1920 - 320)));
-    background: rgba(0, 0, 0, 0.1);
-    transform: translateZ(calc(26px + (80 - 26) * ((100vw - 320px) / (1920 - 320))));
+    background: rgba(0, 0, 0, 0);
+    transform: translateZ(calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320))));
     backdrop-filter: blur(6rem);
     -webkit-backdrop-filter: blur(6rem);
-    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0.3);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
     border-radius: calc(4px + (12 - 4) * ((100vw - 320px) / (1920 - 320)));
-    box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0.5);
+    box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0);
 }
 
 .box:hover .card-mastercard::before {
@@ -180,22 +180,10 @@
         background-repeat: no-repeat;
     }
 
-    .box:hover .card-chip {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(255, 255, 255, 0.5);
-    }
-
     .card-mastercard::before {
         background: url(../images/card-mastercard-dark.svg);
         background-position: center;
         background-size: 80%;
         background-repeat: no-repeat;
-    }
-
-    .box:hover .card-mastercard {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(255, 255, 255, 0.5);
     }
 }

@@ -12,6 +12,46 @@ const linkedin = document.getElementById("linkedin");
 const youtube = document.getElementById("youtube");
 const twitter = document.getElementById("twitter");
 
+var imagesToLoad = [
+    //light theme images preload
+    "images/app-store.svg",
+    "images/google-play.svg",
+    "images/cards.png",
+    "images/apple-pay.svg",
+    "images/google-pay.svg",
+    "images/device.png",
+    "images/ellipse-top.svg",
+    "images/ellipse-center.svg",
+    "images/ellipse-bottom.svg",
+    "images/linkedin.svg",
+    "images/youtube.svg",
+    "images/twitter.svg",
+
+    //dark theme images preload
+    "images/app-store-dark.svg",
+    "images/google-play-dark.svg",
+    "images/cards-dark.png",
+    "images/apple-pay-dark.svg",
+    "images/google-pay-dark.svg",
+    "images/device-dark.png",
+    "images/ellipse-top-dark.svg",
+    "images/ellipse-center-dark.svg",
+    "images/ellipse-bottom-dark.svg",
+    "images/linkedin-dark.svg",
+    "images/youtube-dark.svg",
+    "images/twitter-dark.svg",
+];
+
+var images = [];
+
+for (var i = 0; i < imagesToLoad.length; i++) {
+    images[i] = new Image();
+    images[i].onload = function() {
+        console.log(imagesToLoad[i] + " is loaded");
+    };
+    images[i].src = imagesToLoad[i];
+}
+
 function changeImage() {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         image.setAttribute("src", "images/bank-dark.svg");

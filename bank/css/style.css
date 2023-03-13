@@ -1339,9 +1339,9 @@ input:active {
     html,
     body {
         color: #fff;
-        background: #38152d;
-        background: linear-gradient(0deg, rgba(56, 21, 45, 1) 0%, rgba(12, 48, 52, 1) 50%, rgba(56, 21, 45, 1) 100%);
-        background-color: #38152d;
+        background: #220719;
+        background: linear-gradient(0deg, rgba(34,7,25,1) 0%, rgba(5,30,32,1) 50%, rgba(34,7,25,1) 100%);
+        background-color: #220719;
     }
 
     /*CURSOR*/
