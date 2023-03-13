@@ -41,8 +41,8 @@ html,
 body {
     min-height: 100%;
     color: #000;
-    background-color: #fdcfee;
     background: linear-gradient(0deg, rgba(253, 207, 238, 1) 0%, rgba(175, 248, 255, 1) 50%, rgba(253, 207, 238, 1) 100%);
+    background-color: #fdcfee;
     background-repeat: no-repeat;
     font-family: 'Inter';
     font-style: normal;
@@ -1329,8 +1329,8 @@ input:active {
     html,
     body {
         color: #fff;
-        background: rgb(56, 21, 45);
         background: linear-gradient(0deg, rgba(56, 21, 45, 1) 0%, rgba(12, 48, 52, 1) 50%, rgba(56, 21, 45, 1) 100%);
+        background-color: #38152d;
     }
 
     /*CURSOR*/
