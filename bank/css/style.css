@@ -1324,6 +1324,15 @@ input:active {
     }
 }
 
+@media (prefers-color-scheme: light) {
+
+    html,
+    body {
+        background: #fdcfee;
+        background: linear-gradient(0deg, rgba(253, 207, 238, 1) 0%, rgba(175, 248, 255, 1) 50%, rgba(253, 207, 238, 1) 100%);
+        background-color: #fdcfee;
+    }
+}
 
 @media (prefers-color-scheme: dark) {
 
