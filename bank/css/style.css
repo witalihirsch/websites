@@ -41,6 +41,7 @@ html,
 body {
     min-height: 100%;
     color: #000;
+    background: #fdcfee;
     background: linear-gradient(0deg, rgba(253, 207, 238, 1) 0%, rgba(175, 248, 255, 1) 50%, rgba(253, 207, 238, 1) 100%);
     background-color: #fdcfee;
     background-repeat: no-repeat;
@@ -1329,6 +1330,7 @@ input:active {
     html,
     body {
         color: #fff;
+        background: #38152d;
         background: linear-gradient(0deg, rgba(56, 21, 45, 1) 0%, rgba(12, 48, 52, 1) 50%, rgba(56, 21, 45, 1) 100%);
         background-color: #38152d;
     }
