@@ -9,16 +9,25 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/card.css" />
+    <link rel="stylesheet" type="text/css" href="css/loading.css" />
     <link rel="shortcut icon" type="image/svg" href="images/logo.svg">
     <title>Bank</title>
 </head>
 
 <body>
+    <div id="loading" class="loading-page">
+        <div class="loading-text">Loading</div>
+        <div class="loading-dots">
+            <div class="loading-dot">.</div>
+            <div class="loading-dot">.</div>
+            <div class="loading-dot">.</div>
+        </div>
+    </div>
     <header class="navbar">
         <div class="navbar-wrapper">
             <div class="nav-logo">
                 <a class="nav-text-logo" href="" ontouchstart="">Bank</a>
-                <img src="images/bank.svg" alt="Logo">
+                <img id="nav-logo-img" src="images/bank.svg" alt="Logo">
             </div>
             <div class="nav">
                 <div class="nav-left">
@@ -57,7 +66,7 @@
     </header>
     <main class="wrapper">
         <section class="top-content">
-            <img class="ellipse-top" src="images/ellipse-top.svg" alt="Ellipse Top">
+            <img id="ellipse-top" src="images/ellipse-top.svg" alt="Ellipse Top">
             <div class="container-row">
                 <div class="title-left">
                     <div class="title-left-top">
@@ -66,16 +75,16 @@
                     </div>
                     <div class="title-left-bottom">
                         <a class="market" href="">
-                            <img src="images/app-store.svg" alt="App Store" ontouchstart="">
+                            <img id="app-store" src="images/app-store.svg" alt="App Store" ontouchstart="">
                         </a>
                         <a class="market" href="">
-                            <img src="images/google-play.svg" alt="Google Play" ontouchstart="">
+                            <img id="google-play" src="images/google-play.svg" alt="Google Play" ontouchstart="">
                         </a>
                     </div>
                 </div>
                 <div class="title-right">
                     <div class="cards">
-                        <img src="images/cards.png" alt="Cards">
+                        <img id="cards" src="images/cards.png" alt="Cards">
                         <span class="circle-1"></span>
                         <span class="circle-2"></span>
                         <span class="circle-3"></span>
@@ -85,22 +94,22 @@
             </div>
         </section>
         <section class="center-content">
-            <img class="ellipse-center" src="images/ellipse-center.svg" alt="Ellipse Center">
+            <img id="ellipse-center" src="images/ellipse-center.svg" alt="Ellipse Center">
             <div class="container-column">
                 <div class="center-content-top">
                     <p class="title">Buy with your Phone!</p>
                     <div class="pays">
                         <a class="pay" href="">
-                            <img src="images/apple-pay.svg" alt="Apple Pay" ontouchstart="">
+                            <img id="apple-pay" src="images/apple-pay.svg" alt="Apple Pay" ontouchstart="">
                         </a>
                         <a class="pay" href="">
-                            <img src="images/google-pay.svg" alt="Google Pay" ontouchstart="">
+                            <img id="google-pay" src="images/google-pay.svg" alt="Google Pay" ontouchstart="">
                         </a>
                     </div>
                 </div>
                 <div class="center-content-center">
                     <div class="device">
-                        <img src="images/device.png" alt="Device">
+                        <img id="device" src="images/device.png" alt="Device">
                     </div>
                     <div class="device-description">
                         <div class="device-title">All Operations in one App</div>
@@ -138,19 +147,19 @@
         </section>
     </main>
     <footer class="footer">
-        <img class="ellipse-bottom" src="images/ellipse-bottom.svg" alt="Ellipse Bottom">
+        <img id="ellipse-bottom" src="images/ellipse-bottom.svg" alt="Ellipse Bottom">
         <div class="container-row">
             <div class="footer-section">
                 <button class="footer-title" id="socials-title" ontouchstart="">Socials</button>
                 <div class="socials">
                     <a href="">
-                        <img class="linkedin" src="images/linkedin.svg" alt="LinkedIn">
+                        <img id="linkedin" src="images/linkedin.svg" alt="LinkedIn">
                     </a>
                     <a href="">
-                        <img class="youtube" src="images/youtube.svg" alt="Youtube">
+                        <img id="youtube" src="images/youtube.svg" alt="Youtube">
                     </a>
                     <a href="">
-                        <img class="twitter" src="images/twitter.svg" alt="Twitter">
+                        <img id="twitter" src="images/twitter.svg" alt="Twitter">
                     </a>
                 </div>
             </div>
@@ -195,8 +204,11 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="js/navbar.js"></script>
     <script type="text/javascript" src="js/burger.js"></script>
     <script type="text/javascript" src="js/accordion.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script type="text/javascript" src="js/images.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
     VanillaTilt.init(document.querySelector(".box"), {

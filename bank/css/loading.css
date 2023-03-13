@@ -1,0 +1,38 @@
+.loading-page {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-text {
+    font-size: calc(32px + (64 - 32) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.loading-dots {
+    font-size: calc(32px + (64 - 32) * ((100vw - 320px) / (1920 - 320)));
+    display: flex;
+    margin-left: 1.5%;
+    margin-bottom: 1%;
+}
+
+.loading-dot {
+    width: 4px;
+    height: 1em;
+    margin: 0 0.2em;
+    transform-origin: center;
+    animation: loading 1s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

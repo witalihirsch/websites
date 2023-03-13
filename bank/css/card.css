@@ -43,8 +43,8 @@
 }
 
 .box:hover .card-chip {
-    top: -2%;
-    left: -3%;
+    top: 7%;
+    left: 8%;
     width: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
     height: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
     background: rgba(0, 0, 0, 0.1);
@@ -67,7 +67,7 @@
 }
 
 .box:hover .card-name {
-    top: 7%;
+    top: 17%;
     left: 28%;
     transform: translateZ(calc(13px + (40 - 13) * ((100vw - 320px) / (1920 - 320))));
 }
@@ -146,8 +146,8 @@
 .box:hover .card-mastercard {
     top: initial;
     left: initial;
-    right: -3%;
-    bottom: -2%;
+    right: 8%;
+    bottom: 7%;
     width: calc(36px + (110 - 36) * ((100vw - 320px) / (1920 - 320)));
     height: calc(36px + (110 - 36) * ((100vw - 320px) / (1920 - 320)));
     background: rgba(0, 0, 0, 0.1);
@@ -164,4 +164,38 @@
     background-position: center;
     background-size: 80%;
     background-repeat: no-repeat;
+}
+
+@media (prefers-color-scheme: dark) {
+    .box .card {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(255, 255, 255, 0.05);
+    }
+
+    .card-chip::before {
+        background: url(../images/chip-dark.svg);
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    .box:hover .card-chip {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(255, 255, 255, 0.5);
+    }
+
+    .card-mastercard::before {
+        background: url(../images/card-mastercard-dark.svg);
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    .box:hover .card-mastercard {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(255, 255, 255, 0.5);
+    }
 }

@@ -1,8 +1,8 @@
 <svg width="700" height="707" viewBox="0 0 700 707" fill="none" xmlns="http://www.w3.org/2000/svg">
 <ellipse cx="350" cy="353.352" rx="350" ry="353.352" fill="url(#paint0_diamond_53_7)"/>
 <defs>
-<radialGradient id="paint0_diamond_53_7" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(388 236.241) rotate(111.424) scale(224.494 222.936)">
-<stop stop-color="white"/>
+<radialGradient id="paint0_diamond_53_7" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(388 236.241) rotate(115.954) scale(409.008 406.169)">
+<stop stop-color="#FFFFFE"/>
 <stop offset="1" stop-color="#FFB156"/>
 </radialGradient>
 </defs>

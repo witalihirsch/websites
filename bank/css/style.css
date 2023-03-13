@@ -41,13 +41,12 @@ html,
 body {
     min-height: 100%;
     color: #000;
+    background-color: #fdcfee;
     background: linear-gradient(0deg, rgba(253, 207, 238, 1) 0%, rgba(175, 248, 255, 1) 50%, rgba(253, 207, 238, 1) 100%);
-    background-color: #FDCFEE;
     background-repeat: no-repeat;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-
 }
 
 body.active {
@@ -63,7 +62,7 @@ img {
 
 .wrapper {
     min-height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     overflow: hidden;
 }
@@ -78,7 +77,7 @@ img {
     scrollbar-width: auto !important;
 }
 
-/*others*/
+/*webkit*/
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -108,8 +107,8 @@ img {
 /*SELECTION*/
 
 ::selection {
-    background-color: #000000;
-    color: white;
+    background-color: #000;
+    color: #fff;
 }
 
 
@@ -140,14 +139,18 @@ input:active {
 /*NAVBAR*/
 
 .navbar {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
-    backdrop-filter: blur(calc(1rem + (2 - 1) * ((100vw - 320px) / (1920 - 320))));
-    -webkit-backdrop-filter: blur(calc(1rem + (2 - 1) * ((100vw - 320px) / (1920 - 320))));
     z-index: 2;
+}
+
+.navbar.scrolled {
+    backdrop-filter: blur(calc(2rem + (4 - 2) * ((100vw - 320px) / (1920 - 320))));
+    -webkit-backdrop-filter: blur(calc(2rem + (4 - 2) * ((100vw - 320px) / (1920 - 320))));
 }
 
 .navbar-wrapper {
@@ -242,8 +245,8 @@ input:active {
 .nav-menu {
     display: flex;
     position: relative;
-    width: calc(27px + (36 - 27) * ((100vw - 320px) / (1200 - 320)));
-    height: calc(21px + (28 - 21) * ((100vw - 320px) / (1200 - 320)));
+    width: calc(26px + (36 - 26) * ((100vw - 320px) / (1200 - 320)));
+    height: calc(20px + (28 - 20) * ((100vw - 320px) / (1200 - 320)));
 }
 
 .nav-menu span {
@@ -253,7 +256,8 @@ input:active {
     left: 0;
     width: 100%;
     height: 4px;
-    top: 43%;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: 99px;
     transition: all 0.3s ease 0s;
 }
@@ -279,13 +283,17 @@ input:active {
 }
 
 .nav-menu.active:before {
-    transform: rotate(45deg);
-    top: 43%;
+    transform: rotate(45deg) translateY(-50%);
+    top: 50%;
+    margin-left: -3%;
+    margin-top: -1.5%;
 }
 
 .nav-menu.active:after {
-    transform: rotate(-45deg);
-    bottom: 43%;
+    transform: rotate(-45deg) translateY(50%);
+    bottom: 50%;
+    margin-left: -3%;
+    margin-bottom: -1.5%;
 }
 
 .nav-menu.active span {
@@ -304,9 +312,9 @@ input:active {
     position: relative;
 }
 
-.ellipse-top {
+#ellipse-top {
     position: absolute;
-    top: -30%;
+    top: -25%;
     left: -15%;
     width: calc(250px + (600 - 250) * ((100vw - 320px) / (1920 - 320)));
     height: calc(250px + (600 - 250) * ((100vw - 320px) / (1920 - 320)));
@@ -464,7 +472,7 @@ input:active {
 
 @keyframes slide-left {
     from {
-        transform: translateX(-300px);
+        transform: translateX(-50%);
     }
 
     to {
@@ -474,7 +482,7 @@ input:active {
 
 @keyframes slide-right {
     from {
-        transform: translateX(300px);
+        transform: translateX(50%);
     }
 
     to {
@@ -484,7 +492,7 @@ input:active {
 
 @keyframes slide-top {
     from {
-        transform: translateY(-300px);
+        transform: translateY(-50%);
     }
 
     to {
@@ -494,7 +502,7 @@ input:active {
 
 @keyframes slide-bottom {
     from {
-        transform: translateY(300px);
+        transform: translateY(50%);
     }
 
     to {
@@ -512,7 +520,7 @@ input:active {
     position: relative;
 }
 
-.ellipse-center {
+#ellipse-center {
     position: absolute;
     top: 40%;
     right: -5%;
@@ -664,6 +672,7 @@ input:active {
 
 .inputs input[type=input] {
     font-size: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
+    color: #000;
 }
 
 
@@ -671,14 +680,14 @@ input:active {
 /*FOOTER*/
 
 .footer {
-    display: flex;
+    display: none;
     background-color: rgba(255, 255, 255, 0.4);
     z-index: 1;
     position: relative;
     overflow: hidden;
 }
 
-.ellipse-bottom {
+#ellipse-bottom {
     position: absolute;
     top: 5%;
     left: 0%;
@@ -713,59 +722,76 @@ input:active {
     position: relative;
 }
 
-.linkedin {
+#linkedin {
     max-width: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.linkedin:hover {
-    transform: scale(1.1);
-    filter: invert(29%) sepia(75%) saturate(1385%) hue-rotate(175deg) brightness(93%) contrast(98%);
-}
-
-.linkedin:active {
-    transform: scale(0.9);
-    filter: invert(18%) sepia(97%) saturate(995%) hue-rotate(174deg) brightness(94%) contrast(101%);
     transition: 0.2s;
 }
 
-.youtube {
+#linkedin:hover {
+    transform: scale(1.1);
+    content: url(../images/linkedin-hover.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#linkedin:active {
+    transform: scale(0.9);
+    content: url(../images/linkedin-active.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#youtube {
     max-width: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
     position: absolute;
     right: 0;
     top: 25%;
-
-}
-
-.youtube:hover {
-    transform: scale(1.1);
-    filter: invert(26%) sepia(82%) saturate(6950%) hue-rotate(354deg) brightness(86%) contrast(124%);
-}
-
-.youtube:active {
-    transform: scale(0.9);
-    filter: invert(13%) sepia(69%) saturate(5449%) hue-rotate(356deg) brightness(81%) contrast(112%);
     transition: 0.2s;
 }
 
-.twitter {
+#youtube:hover {
+    transform: scale(1.1);
+    content: url(../images/youtube-hover.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#youtube:active {
+    transform: scale(0.9);
+    content: url(../images/youtube-active.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#twitter {
     max-width: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
     position: absolute;
     left: 0;
     bottom: 0;
-}
-
-.twitter:hover {
-    transform: scale(1.1);
-    filter: invert(54%) sepia(17%) saturate(6377%) hue-rotate(179deg) brightness(90%) contrast(98%);
-}
-
-.twitter:active {
-    transform: scale(0.9);
-    filter: invert(30%) sepia(96%) saturate(809%) hue-rotate(173deg) brightness(89%) contrast(93%);
     transition: 0.2s;
+}
+
+#twitter:hover {
+    transform: scale(1.1);
+    content: url(../images/twitter-hover.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#twitter:active {
+    transform: scale(0.9);
+    content: url(../images/twitter-active.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .footer-section ul li {
@@ -826,7 +852,7 @@ input:active {
 .market img:focus,
 .pay img:focus,
 .inputs input:focus {
-    border-color: #000000;
+    border-color: #000;
 }
 
 .nav-link-button:active,
@@ -844,7 +870,7 @@ input:active {
 .footer-section ul li a:hover,
 .nav-link:focus,
 .footer-section ul li a:focus {
-    color: #000000;
+    color: #000;
 }
 
 .nav-link:active,
@@ -1179,7 +1205,7 @@ input:active {
         align-items: center;
         position: relative;
         margin-right: 8vw;
-        height: 60vh;
+        height: 50vh;
     }
 
     .nav-right {
@@ -1188,7 +1214,7 @@ input:active {
         flex-direction: column;
         align-items: center;
         position: relative;
-        height: 60vh;
+        height: 50vh;
     }
 
     .nav-left ul,
@@ -1199,7 +1225,7 @@ input:active {
     .nav-left ul li,
     .nav-right ul li {
         font-size: calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
-        line-height: 10vw;
+        line-height: 20vh;
         margin-right: 0;
     }
 
@@ -1258,6 +1284,10 @@ input:active {
     .title-right {
         width: 65%;
     }
+
+    .pays {
+        max-width: 80%;
+    }
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
@@ -1285,10 +1315,244 @@ input:active {
 
 @media (hover: hover) and (pointer: fine) {
     .inputs input:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
     .inputs input:focus {
         transform: scale(1);
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    html,
+    body {
+        color: #fff;
+        background: rgb(56, 21, 45);
+        background: linear-gradient(0deg, rgba(56, 21, 45, 1) 0%, rgba(12, 48, 52, 1) 50%, rgba(56, 21, 45, 1) 100%);
+    }
+
+    /*CURSOR*/
+
+    body,
+    a,
+    button {
+        cursor: url('../images/cursor-dark.svg'), default;
+    }
+
+    a:hover,
+    button:hover,
+    input {
+        cursor: url('../images/cursor-hover-dark.svg'), default;
+    }
+
+    body:active,
+    a:active,
+    button:active,
+    input:active {
+        cursor: url('../images/cursor-active-dark.svg'), default;
+    }
+
+    /*SCROLLBAR*/
+
+    /*firefox*/
+    :root {
+        scrollbar-color: #f0f0f0 transparent !important;
+    }
+
+    /*webkit*/
+    ::-webkit-scrollbar-thumb {
+        background-color: #f0f0f0;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #f0f0f0;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background-color: #727272;
+    }
+
+    /*SELECTION*/
+
+    ::selection {
+        background-color: #fff;
+        color: #000;
+    }
+
+    /*NAVBAR*/
+
+    .nav-text-logo {
+        color: #fff;
+    }
+
+    .nav-link {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-link-button {
+        border-color: rgba(255, 255, 255, 0.5);
+        color: #fff;
+    }
+
+    .nav-burger {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-menu span {
+        background-color: #fff;
+    }
+
+    .nav-menu:before,
+    .nav-menu:after {
+        background-color: #fff;
+    }
+
+    /*TOP CONTENT*/
+
+    .title-left-text {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .market img {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .cards .circle-1 {
+        background-color: #A44197;
+    }
+
+    .cards .circle-2 {
+        background-color: #446591;
+    }
+
+    .cards .circle-3 {
+        background-color: #8B3B59;
+    }
+
+    .cards .circle-4 {
+        background-color: #885435;
+    }
+
+    /*CENTER CONTENT*/
+
+    .pay img {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .inputs input {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .inputs input[type=input] {
+        color: #fff;
+    }
+
+    /*FOOTER*/
+
+    .footer {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .footer-title {
+        color: #fff;
+    }
+
+    .footer-section ul li a {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .theme {
+        border-color: #fff;
+    }
+
+    .theme button {
+        border-bottom-color: #fff;
+
+    }
+
+    .theme-default,
+    .theme-default:hover,
+    .theme-default:active {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .theme-light,
+    .theme-dark {
+        color: #fff;
+    }
+
+    /*PSEUDO CLASSES*/
+
+    .nav-link-button:hover,
+    .nav-burger:hover,
+    .market img:hover,
+    .pay img:hover,
+    .nav-link-button:focus,
+    .nav-burger:focus,
+    .market img:focus,
+    .pay img:focus,
+    .inputs input:focus {
+        border-color: #fff;
+    }
+
+    .nav-link-button:active,
+    .nav-burger:active,
+    .market img:active,
+    .pay img:active {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-link-button:active {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-link:hover,
+    .footer-section ul li a:hover,
+    .nav-link:focus,
+    .footer-section ul li a:focus {
+        color: #fff;
+    }
+
+    .nav-link:active,
+    .footer-section ul li a:active {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-burger:active .nav-menu span {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-burger:active .nav-menu:before,
+    .nav-burger:active .nav-menu:after {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 1200px) {
+        .nav-link-button {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .nav-link-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .nav-link-button:active {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .footer-title:hover {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-title:active {
+            color: #fff;
+        }
     }
 }
