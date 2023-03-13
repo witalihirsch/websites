@@ -422,14 +422,14 @@ input:active {
 .cards .circle-1 {
     position: absolute;
     right: -10%;
-    bottom: -10%;
+    bottom: 0%;
     background-color: #ff4ee8;
     filter: blur(50px);
     border-radius: 100%;
     width: inherit;
     height: inherit;
-    width: 20vw;
-    height: 20vw;
+    width: 30vw;
+    height: 30vw;
 }
 
 .cards .circle-2 {
@@ -447,15 +447,15 @@ input:active {
 
 .cards .circle-3 {
     position: absolute;
-    right: -5%;
+    right: 0%;
     top: 0%;
     background-color: #ff7fae;
     filter: blur(50px);
     border-radius: 100%;
     width: inherit;
     height: inherit;
-    width: 20vw;
-    height: 20vw;
+    width: 15vw;
+    height: 15vw;
 }
 
 .cards .circle-4 {
