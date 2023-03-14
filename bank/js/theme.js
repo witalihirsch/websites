@@ -57,6 +57,9 @@ const defaultButton = document.querySelector(".theme-default");
 const lightButton = document.querySelector(".theme-light");
 const darkButton = document.querySelector(".theme-dark");
 
+const metaLight = document.getElementById("theme-color-meta-light");
+const metaDark = document.getElementById("theme-color-meta-dark");
+
 const userTheme = localStorage.getItem("theme");
 
 function setTheme(themeName, buttonElement) {
@@ -188,6 +191,8 @@ lightButton.addEventListener("click", function() {
     defaultButton.classList.remove("checked");
     lightButton.classList.add("checked");
     darkButton.classList.remove("checked");
+
+    metaLight.setAttribute("content", "#fdcfee");
 });
 
 darkButton.addEventListener("click", function() {
@@ -195,6 +200,8 @@ darkButton.addEventListener("click", function() {
     defaultButton.classList.remove("checked");
     lightButton.classList.remove("checked");
     darkButton.classList.add("checked");
+
+    metaDark.setAttribute("content", "#220719");
 });
 
 if (window.matchMedia) {
