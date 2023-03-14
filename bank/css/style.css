@@ -66,6 +66,8 @@ img {
     display: none;
     flex-direction: column;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -146,7 +148,7 @@ input:active {
     left: 0;
     width: 100%;
     height: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
-    z-index: 2;
+    z-index: 3;
 }
 
 .navbar.scrolled {
@@ -810,6 +812,27 @@ input:active {
     width: calc(180px + (240 - 180) * ((100vw - 320px) / (1920 - 320)));
     border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid #000;
     border-radius: calc(8px + (16 - 8) * ((100vw - 320px) / (1920 - 320)));
+    position: relative;
+}
+
+.theme-line1 {
+    position: absolute;
+    top: 33%;
+    transform: translateY(-33%);
+    left: 0;
+    background-color: #000;
+    height: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320)));
+    width: 100%;
+}
+
+.theme-line2 {
+    position: absolute;
+    bottom: 33%;
+    transform: translateY(33%);
+    left: 0;
+    background-color: #000;
+    height: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320)));
+    width: 100%;
 }
 
 .theme button {
@@ -817,27 +840,220 @@ input:active {
     font-size: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 600;
     padding: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320))) calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
-    border-bottom: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid #000;
-
-}
-
-.theme button:last-child {
-    border-bottom: 0;
 }
 
 .theme-default,
-.theme-default:hover,
-.theme-default:active {
-    background-color: #000;
-    border-top-left-radius: calc(4px + (8 - 4) * ((100vw - 320px) / (1920 - 320)));
-    border-top-right-radius: calc(4px + (8 - 4) * ((100vw - 320px) / (1920 - 320)));
-    color: #fff;
+.theme .theme-dark,
+.theme-light {
+    background-color: transparent;
+    color: #000;
+    transition: 0.2s;
 }
 
-.theme-light,
+.theme-default {
+    border-top-left-radius: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+    border-top-right-radius: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+}
+
 .theme-dark {
-    color: #000;
-    background-color: transparent;
+    border-bottom-left-radius: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+    border-bottom-right-radius: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.theme-default:hover,
+.theme-dark:hover,
+.theme-light:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.05, 1.1);
+}
+
+.theme-default:active,
+.theme-dark:active,
+.theme-light:active {
+    background-color: #000;
+    color: #fff;
+    transform: scale(0.95, 0.9);
+}
+
+.theme-default.checked,
+.theme-dark.checked,
+.theme-light.checked {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1);
+}
+
+
+
+/*CARD*/
+
+.box {
+    position: relative;
+    border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
+    transform-style: preserve-3d;
+}
+
+.box .card {
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    width: calc(180px + (545 - 180) * ((100vw - 320px) / (1920 - 320)));
+    min-height: calc(110px + (330 - 110) * ((100vw - 320px) / (1920 - 320)));
+    backdrop-filter: blur(6rem);
+    -webkit-backdrop-filter: blur(6rem);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0.5);
+    border-radius: calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320)));
+    box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0.05);
+    transform-style: preserve-3d;
+}
+
+.card-chip {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    width: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
+    backdrop-filter: blur(6rem);
+    -webkit-backdrop-filter: blur(6rem);
+    background: rgba(255, 255, 255, 0);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
+    border-radius: calc(4px + (12 - 4) * ((100vw - 320px) / (1920 - 320)));
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.card-chip::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(../images/chip.svg);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.box:hover .card-chip {
+    top: 7%;
+    left: 8%;
+    width: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
+    background: rgba(0, 0, 0, 0);
+    transform: translateZ(calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320))));
+    backdrop-filter: blur(6rem);
+    -webkit-backdrop-filter: blur(6rem);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
+    border-radius: calc(4px + (12 - 4) * ((100vw - 320px) / (1920 - 320)));
+    box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0);
+}
+
+.card-name {
+    position: absolute;
+    top: 12%;
+    left: 23%;
+    font-size: calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.box:hover .card-name {
+    top: 17%;
+    left: 28%;
+    transform: translateZ(calc(13px + (40 - 13) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.card-year {
+    position: absolute;
+    top: initial;
+    bottom: 16%;
+    left: 5%;
+    font-size: calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.box:hover .card-year {
+    top: initial;
+    bottom: 21%;
+    left: 10%;
+    transform: translateZ(calc(13px + (40 - 13) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.card-num {
+    position: absolute;
+    top: initial;
+    bottom: 7%;
+    left: 5%;
+    font-size: calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.box:hover .card-num {
+    top: initial;
+    bottom: 12%;
+    left: 10%;
+    transform: translateZ(calc(13px + (40 - 13) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.card-name::before,
+.card-year::before,
+.card-num::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.card-mastercard {
+    position: absolute;
+    top: initial;
+    left: initial;
+    right: 3%;
+    bottom: 2%;
+    width: calc(36px + (110 - 36) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(36px + (110 - 36) * ((100vw - 320px) / (1920 - 320)));
+    backdrop-filter: blur(6rem);
+    -webkit-backdrop-filter: blur(6rem);
+    background: rgba(255, 255, 255, 0);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
+    border-radius: calc(4px + (12 - 4) * ((100vw - 320px) / (1920 - 320)));
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.card-mastercard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(../images/card-mastercard.svg);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.box:hover .card-mastercard {
+    top: initial;
+    left: initial;
+    right: 8%;
+    bottom: 7%;
+    width: calc(36px + (110 - 36) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(36px + (110 - 36) * ((100vw - 320px) / (1920 - 320)));
+    background: rgba(0, 0, 0, 0);
+    transform: translateZ(calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320))));
+    backdrop-filter: blur(6rem);
+    -webkit-backdrop-filter: blur(6rem);
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
+    border-radius: calc(4px + (12 - 4) * ((100vw - 320px) / (1920 - 320)));
+    box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0);
+}
+
+.box:hover .card-mastercard::before {
+    background: url(../images/card-mastercard-color.svg);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
 }
 
 
@@ -1324,6 +1540,8 @@ input:active {
     }
 }
 
+
+
 @media (prefers-color-scheme: light) {
 
     html,
@@ -1331,6 +1549,267 @@ input:active {
         background: #fdcfee;
         background: linear-gradient(0deg, rgba(253, 207, 238, 1) 0%, rgba(175, 248, 255, 1) 50%, rgba(253, 207, 238, 1) 100%);
         background-color: #fdcfee;
+    }
+
+    /*CURSOR*/
+
+    body,
+    a,
+    button {
+        cursor: url('../images/cursor.svg'), default;
+    }
+
+    a:hover,
+    button:hover,
+    input {
+        cursor: url('../images/cursor-hover.svg'), default;
+    }
+
+    body:active,
+    a:active,
+    button:active,
+    input:active {
+        cursor: url('../images/cursor-active.svg'), default;
+    }
+
+    /*SCROLLBAR*/
+
+    /*firefox*/
+    :root {
+        scrollbar-color: #252525 transparent !important;
+    }
+
+    /*webkit*/
+    ::-webkit-scrollbar-thumb {
+        background-color: #252525;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #252525;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background-color: #575757;
+    }
+
+    /*SELECTION*/
+
+    ::selection {
+        background-color: #000;
+        color: #fff;
+    }
+
+    /*NAVBAR*/
+
+    .nav-text-logo {
+        color: #000;
+    }
+
+    .nav-link {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-link-button {
+        border-color: rgba(0, 0, 0, 0.5);
+        color: #000;
+    }
+
+    .nav-burger {
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-menu span {
+        background-color: #000;
+    }
+
+    .nav-menu:before,
+    .nav-menu:after {
+        background-color: #000;
+    }
+
+    /*TOP CONTENT*/
+
+    .title-left-text {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .market img {
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .cards .circle-1 {
+        background-color: #ff4ee8;
+    }
+
+    .cards .circle-2 {
+        background-color: #97c4ff;
+    }
+
+    .cards .circle-3 {
+        background-color: #ff7fae;
+    }
+
+    .cards .circle-4 {
+        background-color: #feae7e;
+    }
+
+    /*CENTER CONTENT*/
+
+    .pay img {
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .inputs input {
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .inputs input[type=input] {
+        color: #000;
+    }
+
+    /*FOOTER*/
+
+    .footer {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-title {
+        color: #000;
+    }
+
+    .footer-section ul li a {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .theme {
+        border-color: #000;
+    }
+
+    .theme-line1,
+    .theme-line2 {
+        background-color: #000;
+    }
+
+    #theme-default,
+    #theme-dark,
+    #theme-light {
+        background-color: transparent;
+        color: #000;
+    }
+
+    #theme-default:hover,
+    #theme-dark:hover,
+    #theme-light:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    #theme-default:active,
+    #theme-dark:active,
+    #theme-light:active {
+        background-color: #000;
+        color: #fff;
+    }
+
+    #theme-default.checked,
+    #theme-dark.checked,
+    #theme-light.checked {
+        background-color: #000;
+        color: #fff;
+    }
+
+    /*CARD*/
+
+    .box .card {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0.05);
+    }
+
+    .card-chip::before {
+        background: url(../images/chip.svg);
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    .card-mastercard::before {
+        background: url(../images/card-mastercard.svg);
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    /*PSEUDO CLASSES*/
+
+    .nav-link-button:hover,
+    .nav-burger:hover,
+    .market img:hover,
+    .pay img:hover,
+    .nav-link-button:focus,
+    .nav-burger:focus,
+    .market img:focus,
+    .pay img:focus,
+    .inputs input:focus {
+        border-color: #000;
+    }
+
+    .nav-link-button:active,
+    .nav-burger:active,
+    .market img:active,
+    .pay img:active {
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-link-button:active {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-link:hover,
+    .footer-section ul li a:hover,
+    .nav-link:focus,
+    .footer-section ul li a:focus {
+        color: #000;
+    }
+
+    .nav-link:active,
+    .footer-section ul li a:active {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-burger:active .nav-menu span {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-burger:active .nav-menu:before,
+    .nav-burger:active .nav-menu:after {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 1200px) {
+        .nav-link-button {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .nav-link-button:hover {
+            background-color: #101010;
+        }
+
+        .nav-link-button:active {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .footer-title:hover {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .footer-title:active {
+            color: #000;
+        }
     }
 }
 
@@ -1340,7 +1819,7 @@ input:active {
     body {
         color: #fff;
         background: #220719;
-        background: linear-gradient(0deg, rgba(34,7,25,1) 0%, rgba(5,30,32,1) 50%, rgba(34,7,25,1) 100%);
+        background: linear-gradient(0deg, rgba(34, 7, 25, 1) 0%, rgba(5, 30, 32, 1) 50%, rgba(34, 7, 25, 1) 100%);
         background-color: #220719;
     }
 
@@ -1478,21 +1957,59 @@ input:active {
         border-color: #fff;
     }
 
-    .theme button {
-        border-bottom-color: #fff;
-
+    .theme-line1,
+    .theme-line2 {
+        background-color: #fff;
     }
 
-    .theme-default,
-    .theme-default:hover,
-    .theme-default:active {
+    #theme-default,
+    #theme-dark,
+    #theme-light {
+        background-color: transparent;
+        color: #fff;
+    }
+
+    #theme-default:hover,
+    #theme-dark:hover,
+    #theme-light:hover {
         background-color: #fff;
         color: #000;
     }
 
-    .theme-light,
-    .theme-dark {
-        color: #fff;
+    #theme-default:active,
+    #theme-dark:active,
+    #theme-light:active {
+        background-color: #fff;
+        color: #000;
+    }
+
+    #theme-default.checked,
+    #theme-dark.checked,
+    #theme-light.checked {
+        background-color: #fff;
+        color: #000;
+    }
+
+    /*CARD*/
+
+    .box .card {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(255, 255, 255, 0.05);
+    }
+
+    .card-chip::before {
+        background: url(../images/chip-dark.svg);
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    .card-mastercard::before {
+        background: url(../images/card-mastercard-dark.svg);
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
     }
 
     /*PSEUDO CLASSES*/

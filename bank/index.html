@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link id="theme-style" rel="stylesheet" href="css/light.css">
     <link rel="stylesheet" type="text/css" href="css/card.css" />
     <link rel="stylesheet" type="text/css" href="css/loading.css" />
     <link rel="shortcut icon" type="image/svg" href="images/logo.svg">
@@ -200,19 +201,21 @@
             <div class="footer-section">
                 <button class="footer-title" id="theme-title" ontouchstart="">Website Theme</button>
                 <div class="theme">
-                    <button class="theme-default">System</button>
-                    <button class="theme-light">Light</button>
-                    <button class="theme-dark">Dark</button>
+                    <span class="theme-line1"></span>
+                    <span class="theme-line2"></span>
+                    <button id="theme-default" class="theme-default" ontouchstart="">System</button>
+                    <button id="theme-light" class="theme-light" ontouchstart="">Light</button>
+                    <button id="theme-dark" class="theme-dark" ontouchstart="">Dark</button>
                 </div>
             </div>
         </div>
     </footer>
     <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
     <script type="text/javascript" src="js/burger.js"></script>
     <script type="text/javascript" src="js/accordion.js"></script>
     <script type="text/javascript" src="js/loading.js"></script>
     <script type="text/javascript" src="js/parallax.js"></script>
-    <script type="text/javascript" src="js/images.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
     VanillaTilt.init(document.querySelector(".box"), {

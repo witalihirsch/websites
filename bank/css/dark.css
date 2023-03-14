@@ -1,0 +1,268 @@
+html,
+body {
+    color: #fff;
+    background: #220719;
+    background: linear-gradient(0deg, rgba(34, 7, 25, 1) 0%, rgba(5, 30, 32, 1) 50%, rgba(34, 7, 25, 1) 100%);
+    background-color: #220719;
+}
+
+/*CURSOR*/
+
+body,
+a,
+button {
+    cursor: url('../images/cursor-dark.svg'), default;
+}
+
+a:hover,
+button:hover,
+input {
+    cursor: url('../images/cursor-hover-dark.svg'), default;
+}
+
+body:active,
+a:active,
+button:active,
+input:active {
+    cursor: url('../images/cursor-active-dark.svg'), default;
+}
+
+/*SCROLLBAR*/
+
+/*firefox*/
+:root {
+    scrollbar-color: #f0f0f0 transparent !important;
+}
+
+/*webkit*/
+::-webkit-scrollbar-thumb {
+    background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #727272;
+}
+
+/*SELECTION*/
+
+::selection {
+    background-color: #fff;
+    color: #000;
+}
+
+/*NAVBAR*/
+
+.nav-text-logo {
+    color: #fff;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link-button {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+
+.nav-burger {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-menu span {
+    background-color: #fff;
+}
+
+.nav-menu:before,
+.nav-menu:after {
+    background-color: #fff;
+}
+
+/*TOP CONTENT*/
+
+.title-left-text {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.market img {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.cards .circle-1 {
+    background-color: #A44197;
+}
+
+.cards .circle-2 {
+    background-color: #446591;
+}
+
+.cards .circle-3 {
+    background-color: #8B3B59;
+}
+
+.cards .circle-4 {
+    background-color: #885435;
+}
+
+/*CENTER CONTENT*/
+
+.pay img {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.inputs input {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.inputs input[type=input] {
+    color: #fff;
+}
+
+/*FOOTER*/
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.footer-title {
+    color: #fff;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.theme {
+    border-color: #fff;
+}
+
+.theme-line1,
+.theme-line2 {
+    background-color: #fff;
+}
+
+#theme-default,
+#theme-dark,
+#theme-light {
+    background-color: transparent;
+    color: #fff;
+}
+
+#theme-default:hover,
+#theme-dark:hover,
+#theme-light:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#theme-default:active,
+#theme-dark:active,
+#theme-light:active {
+    background-color: #fff;
+    color: #000;
+}
+
+#theme-default.checked,
+#theme-dark.checked,
+#theme-light.checked {
+    background-color: #fff;
+    color: #000;
+}
+
+/*CARD*/
+
+.box .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(255, 255, 255, 0.05);
+}
+
+.card-chip::before {
+    background: url(../images/chip-dark.svg);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.card-mastercard::before {
+    background: url(../images/card-mastercard-dark.svg);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+/*PSEUDO CLASSES*/
+
+.nav-link-button:hover,
+.nav-burger:hover,
+.market img:hover,
+.pay img:hover,
+.nav-link-button:focus,
+.nav-burger:focus,
+.market img:focus,
+.pay img:focus,
+.inputs input:focus {
+    border-color: #fff;
+}
+
+.nav-link-button:active,
+.nav-burger:active,
+.market img:active,
+.pay img:active {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link-button:active {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:hover,
+.footer-section ul li a:hover,
+.nav-link:focus,
+.footer-section ul li a:focus {
+    color: #fff;
+}
+
+.nav-link:active,
+.footer-section ul li a:active {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-burger:active .nav-menu span {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-burger:active .nav-menu:before,
+.nav-burger:active .nav-menu:after {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1200px) {
+    .nav-link-button {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .nav-link-button:hover {
+        background-color: #f0f0f0;
+    }
+
+    .nav-link-button:active {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-title:hover {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-title:active {
+        color: #fff;
+    }
+}
