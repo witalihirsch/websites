@@ -54,6 +54,25 @@ input:active {
     color: #fff;
 }
 
+/*BACK TO TOP*/
+
+.back-to-top {
+    border-color: #000;
+    color: #000;
+}
+
+.back-to-top path {
+    stroke: #000;
+}
+
+.back-to-top:hover {
+    background-color: #000;
+}
+
+.back-to-top:hover path {
+    stroke: #fff;
+}
+
 /*NAVBAR*/
 
 .nav-text-logo {

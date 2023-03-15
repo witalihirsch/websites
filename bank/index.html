@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta id="theme-color-meta-light" name="theme-color" content="#fdcfee" media="(prefers-color-scheme: light)">
-    <meta id="theme-color-meta-dark" name="theme-color" content="#220719" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#fdcfee" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#220719" media="(prefers-color-scheme: dark)">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="yes">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
@@ -68,6 +68,12 @@
             </button>
         </div>
     </header>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <svg class="svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M5 12L12 5L19 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
     <main class="wrapper">
         <section class="top-content">
             <img id="ellipse-top" src="images/ellipse-top.svg" alt="Ellipse Top">
@@ -216,6 +222,7 @@
     <script type="text/javascript" src="js/accordion.js"></script>
     <script type="text/javascript" src="js/loading.js"></script>
     <script type="text/javascript" src="js/parallax.js"></script>
+    <script type="text/javascript" src="js/back-to-top.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
     VanillaTilt.init(document.querySelector(".box"), {

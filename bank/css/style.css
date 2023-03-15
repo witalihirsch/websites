@@ -139,6 +139,60 @@ input:active {
 
 
 
+/*BACK TO TOP*/
+
+.back-to-top {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    height: calc(40px + (70 - 40) * ((100vw - 320px) / (1920 - 320)));
+    width: calc(40px + (70 - 40) * ((100vw - 320px) / (1920 - 320)));
+    background-color: transparent;
+    backdrop-filter: blur(calc(1rem + (2 - 1) * ((100vw - 320px) / (1920 - 320))));
+    -webkit-backdrop-filter: blur(calc(1rem + (2 - 1) * ((100vw - 320px) / (1920 - 320))));
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid #000;
+    color: #000;
+    border-radius: 50%;
+    transition: 0.2s;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.back-to-top:hover {
+    background-color: #000;
+}
+
+.back-to-top svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back-to-top path {
+    stroke: #000;
+}
+
+.back-to-top:hover path {
+    stroke: #fff;
+}
+
+.back-to-top:active {
+    transform: scale(0.8);
+}
+
+.back-to-top svg {
+    width: 80%;
+    height: 80%;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 /*NAVBAR*/
 
 .navbar {
@@ -1599,6 +1653,25 @@ input:active {
         color: #fff;
     }
 
+    /*BACK TO TOP*/
+
+    .back-to-top {
+        border-color: #000;
+        color: #000;
+    }
+
+    .back-to-top path {
+        stroke: #000;
+    }
+
+    .back-to-top:hover {
+        background-color: #000;
+    }
+
+    .back-to-top:hover path {
+        stroke: #fff;
+    }
+
     /*NAVBAR*/
 
     .nav-text-logo {
@@ -1869,6 +1942,25 @@ input:active {
     ::selection {
         background-color: #fff;
         color: #000;
+    }
+
+    /*BACK TO TOP*/
+
+    .back-to-top {
+        border-color: #fff;
+        color: #fff;
+    }
+
+    .back-to-top path {
+        stroke: #fff;
+    }
+
+    .back-to-top:hover {
+        background-color: #fff;
+    }
+
+    .back-to-top:hover path {
+        stroke: #000;
     }
 
     /*NAVBAR*/
