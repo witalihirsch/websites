@@ -40,11 +40,10 @@ div {
 html,
 body {
     min-height: 100%;
+    background: #fdcfff;
+    background: linear-gradient(0deg, rgb(253, 207, 255) 0%, rgb(175, 230, 255) 50%, rgb(253, 207, 255) 100%);
+    background-color: #fdcfff;
     color: #000;
-    /*background: #fdcfee;
-    background: linear-gradient(0deg, rgba(253, 207, 238, 1) 0%, rgba(175, 248, 255, 1) 50%, rgba(253, 207, 238, 1) 100%);
-    background-color: #fdcfee;*/
-    background: hsl(0 85% 85%);
     background-repeat: no-repeat;
     font-family: 'Inter';
     font-style: normal;
@@ -55,7 +54,8 @@ body.active {
     overflow: hidden;
 }
 
-img {
+img,
+a {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -192,6 +192,7 @@ input:active {
     visibility: visible;
     opacity: 1;
 }
+
 
 
 /*NAVBAR*/
@@ -877,7 +878,7 @@ input:active {
     left: 0;
     background-color: #000;
     height: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320)));
-    width: 100%;
+    width: 101%;
 }
 
 .theme-line2 {
@@ -887,7 +888,7 @@ input:active {
     left: 0;
     background-color: #000;
     height: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320)));
-    width: 100%;
+    width: 101%;
 }
 
 .theme button {
@@ -906,13 +907,13 @@ input:active {
 }
 
 .theme-default {
-    border-top-left-radius: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
-    border-top-right-radius: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+    border-top-left-radius: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320)));
+    border-top-right-radius: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .theme-dark {
-    border-bottom-left-radius: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
-    border-bottom-right-radius: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+    border-bottom-left-radius: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320)));
+    border-bottom-right-radius: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .theme-default:hover,
@@ -920,7 +921,7 @@ input:active {
 .theme-light:hover {
     background-color: #000;
     color: #fff;
-    transform: scale(1.05, 1.1);
+    transform: scale(1.08, 1.1);
 }
 
 .theme-default:active,
@@ -928,7 +929,7 @@ input:active {
 .theme-light:active {
     background-color: #000;
     color: #fff;
-    transform: scale(0.95, 0.9);
+    transform: scale(0.98, 0.9);
 }
 
 .theme-default.checked,
@@ -936,7 +937,7 @@ input:active {
 .theme-light.checked {
     background-color: #000;
     color: #fff;
-    transform: scale(1);
+    transform: scale(1.01);
 }
 
 
@@ -968,8 +969,6 @@ input:active {
     left: 3%;
     width: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
     height: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
-    backdrop-filter: blur(6rem);
-    -webkit-backdrop-filter: blur(6rem);
     background: rgba(255, 255, 255, 0);
     border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
     border-radius: calc(4px + (12 - 4) * ((100vw - 320px) / (1920 - 320)));
@@ -994,8 +993,6 @@ input:active {
     height: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
     background: rgba(0, 0, 0, 0);
     transform: translateZ(calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320))));
-    backdrop-filter: blur(6rem);
-    -webkit-backdrop-filter: blur(6rem);
     border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
     border-radius: calc(4px + (12 - 4) * ((100vw - 320px) / (1920 - 320)));
     box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0);
@@ -1069,8 +1066,6 @@ input:active {
     bottom: 2%;
     width: calc(36px + (110 - 36) * ((100vw - 320px) / (1920 - 320)));
     height: calc(36px + (110 - 36) * ((100vw - 320px) / (1920 - 320)));
-    backdrop-filter: blur(6rem);
-    -webkit-backdrop-filter: blur(6rem);
     background: rgba(255, 255, 255, 0);
     border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
     border-radius: calc(4px + (12 - 4) * ((100vw - 320px) / (1920 - 320)));
@@ -1097,8 +1092,6 @@ input:active {
     height: calc(36px + (110 - 36) * ((100vw - 320px) / (1920 - 320)));
     background: rgba(0, 0, 0, 0);
     transform: translateZ(calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320))));
-    backdrop-filter: blur(6rem);
-    -webkit-backdrop-filter: blur(6rem);
     border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0);
     border-radius: calc(4px + (12 - 4) * ((100vw - 320px) / (1920 - 320)));
     box-shadow: 0 calc(8px + (24 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (44 - 14) * ((100vw - 320px) / (1920 - 320))) rgba(0, 0, 0, 0);
@@ -1601,10 +1594,9 @@ input:active {
 
     html,
     body {
-        /*background: #fdcfee;
-        background: linear-gradient(0deg, rgba(253, 207, 238, 1) 0%, rgba(175, 248, 255, 1) 50%, rgba(253, 207, 238, 1) 100%);
-        background-color: #fdcfee;*/
-        background: hsl(0 85% 85%);
+        background: #fdcfff;
+        background: linear-gradient(0deg, rgb(253, 207, 255) 0%, rgb(175, 230, 255) 50%, rgb(253, 207, 255) 100%);
+        background-color: #fdcfff;
         color: #000;
     }
 
@@ -1893,11 +1885,9 @@ input:active {
 
     html,
     body {
-        /*color: #fff;
         background: #220719;
-        background: linear-gradient(0deg, rgba(34, 7, 25, 1) 0%, rgba(5, 30, 32, 1) 50%, rgba(34, 7, 25, 1) 100%);
-        background-color: #220719;*/
-        background: hsl(0 66% 8%);
+        background: linear-gradient(0deg, rgba(34, 7, 25, 1) 0%, rgba(5, 20, 25, 1) 50%, rgba(34, 7, 25, 1) 100%);
+        background-color: #220719;
         color: #fff;
     }
 

@@ -1,10 +1,8 @@
 html,
 body {
-    color: #000;
-    /*background: #fdcfee;
-    background: linear-gradient(0deg, rgba(253, 207, 238, 1) 0%, rgba(175, 248, 255, 1) 50%, rgba(253, 207, 238, 1) 100%);
-    background-color: #fdcfee;*/
-    background: hsl(0 85% 85%);
+    background: #fdcfff;
+    background: linear-gradient(0deg, rgb(253, 207, 255) 0%, rgb(175, 230, 255) 50%, rgb(253, 207, 255) 100%);
+    background-color: #fdcfff;
     color: #000;
 }
 
