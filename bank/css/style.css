@@ -60,6 +60,8 @@ a {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
 }
 
 .wrapper {
@@ -279,6 +281,10 @@ input:active {
 .nav-link {
     color: rgba(0, 0, 0, 0.5);
     transition: 0.2s;
+}
+
+.nav-link-active {
+    color: #000;
 }
 
 .nav-button {
@@ -1677,6 +1683,10 @@ input:active {
         color: rgba(0, 0, 0, 0.5);
     }
 
+    .nav-link-active {
+        color: #000;
+    }
+
     .nav-link-button {
         border-color: rgba(0, 0, 0, 0.5);
         color: #000;
@@ -1966,6 +1976,10 @@ input:active {
 
     .nav-link {
         color: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-link-active {
+        color: #fff;
     }
 
     .nav-link-button {

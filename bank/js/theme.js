@@ -66,9 +66,6 @@ function changeImagesToDarkMode() {
 
     device.setAttribute("src", "images/device-dark.png");
 
-    ellipseTop.setAttribute("src", "images/ellipse-top-dark.svg");
-    ellipseCenter.setAttribute("src", "images/ellipse-center-dark.svg");
-    ellipseBottom.setAttribute("src", "images/ellipse-bottom-dark.svg");
 
     linkedin.setAttribute("src", "images/linkedin-dark.svg");
     youtube.setAttribute("src", "images/youtube-dark.svg");
@@ -88,9 +85,6 @@ function changeImagesToLightMode() {
 
     device.setAttribute("src", "images/device.png");
 
-    ellipseTop.setAttribute("src", "images/ellipse-top.svg");
-    ellipseCenter.setAttribute("src", "images/ellipse-center.svg");
-    ellipseBottom.setAttribute("src", "images/ellipse-bottom.svg");
 
     linkedin.setAttribute("src", "images/linkedin.svg");
     youtube.setAttribute("src", "images/youtube.svg");

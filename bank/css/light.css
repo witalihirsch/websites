@@ -83,6 +83,10 @@ input:active {
     color: rgba(0, 0, 0, 0.5);
 }
 
+.nav-link-active {
+    color: #000;
+}
+
 .nav-link-button {
     border-color: rgba(0, 0, 0, 0.5);
     color: #000;
