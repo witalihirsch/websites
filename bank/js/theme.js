@@ -2,6 +2,8 @@
 const image = document.getElementById("nav-logo-img");
 const appStore = document.getElementById("app-store");
 const googlePlay = document.getElementById("google-play");
+const appStorePopup = document.getElementById("app-store-popup");
+const googlePlayPopup = document.getElementById("google-play-popup");
 const applePay = document.getElementById("apple-pay");
 const googlePay = document.getElementById("google-pay");
 const device = document.getElementById("device");
@@ -15,8 +17,10 @@ const twitter = document.getElementById("twitter");
 
 var imagesToLoad = [
     //light theme images preload
-    "images/app-store.svg",
-    "images/google-play.svg",
+    "images/app-store-top.svg",
+    "images/google-play-top.svg",
+    "images/app-store-popup.svg",
+    "images/google-play-popup.svg",
     "images/cards.png",
     "images/apple-pay.svg",
     "images/google-pay.svg",
@@ -29,8 +33,10 @@ var imagesToLoad = [
     "images/twitter.svg",
 
     //dark theme images preload
-    "images/app-store-dark.svg",
-    "images/google-play-dark.svg",
+    "images/app-store-dark-top.svg",
+    "images/google-play-dark-top.svg",
+    "images/app-store-dark-popup.svg",
+    "images/google-play-dark-popup.svg",
     "images/cards-dark.png",
     "images/apple-pay-dark.svg",
     "images/google-pay-dark.svg",
@@ -56,8 +62,11 @@ for (var i = 0; i < imagesToLoad.length; i++) {
 function changeImagesToDarkMode() {
     image.setAttribute("src", "images/bank-dark.svg");
 
-    appStore.setAttribute("src", "images/app-store-dark.svg");
-    googlePlay.setAttribute("src", "images/google-play-dark.svg");
+    appStore.setAttribute("src", "images/app-store-dark-top.svg");
+    googlePlay.setAttribute("src", "images/google-play-dark-top.svg");
+
+    appStorePopup.setAttribute("src", "images/app-store-dark-popup.svg");
+    googlePlayPopup.setAttribute("src", "images/google-play-dark-popup.svg");
 
     cards.setAttribute("src", "images/cards-dark.png");
 
@@ -78,8 +87,11 @@ function changeImagesToDarkMode() {
 function changeImagesToLightMode() {
     image.setAttribute("src", "images/bank.svg");
 
-    appStore.setAttribute("src", "images/app-store.svg");
-    googlePlay.setAttribute("src", "images/google-play.svg");
+    appStore.setAttribute("src", "images/app-store-top.svg");
+    googlePlay.setAttribute("src", "images/google-play-top.svg");
+
+    appStorePopup.setAttribute("src", "images/app-store-popup.svg");
+    googlePlayPopup.setAttribute("src", "images/google-play-popup.svg");
 
     cards.setAttribute("src", "images/cards.png");
 

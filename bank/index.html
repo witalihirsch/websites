@@ -27,6 +27,19 @@
             <div class="loading-dot">.</div>
         </div>
     </div>
+    <div id="get-app" class="get-app-page">
+        <button id="close-popup" class="close-popup" ontouchstart="">
+            <div class="close-popup-icon">
+                <span></span>
+            </div>
+        </button>
+        <a class="market-popup market" href="">
+            <img id="app-store-popup" src="images/app-store-popup.svg" alt="App Store" ontouchstart="">
+        </a>
+        <a class="market-popup market" href="">
+            <img id="google-play-popup" src="images/google-play-popup.svg" alt="Google Play" ontouchstart="">
+        </a>
+    </div>
     <header class="navbar">
         <div class="navbar-wrapper">
             <div class="nav-logo">
@@ -84,17 +97,21 @@
                         <p class="title-left-text">See how we can help with making your shopping experience and money management productively.</p>
                     </div>
                     <div class="title-left-bottom">
-                        <a class="market" href="">
-                            <img id="app-store" src="images/app-store.svg" alt="App Store" ontouchstart="">
+                        <a class="market-top market" href="">
+                            <img id="app-store" src="images/app-store-top.svg" alt="App Store" ontouchstart="">
                         </a>
-                        <a class="market" href="">
-                            <img id="google-play" src="images/google-play.svg" alt="Google Play" ontouchstart="">
+                        <a class="market-top market" href="">
+                            <img id="google-play" src="images/google-play-top.svg" alt="Google Play" ontouchstart="">
                         </a>
                     </div>
                 </div>
                 <div class="title-right">
                     <div class="cards">
                         <img id="cards" src="images/cards.png" alt="Cards">
+                        <!--<span class="circle-1"></span>
+                        <span class="circle-2"></span>
+                        <span class="circle-3"></span>
+                        <span class="circle-4"></span>-->
                     </div>
                 </div>
             </div>
@@ -220,6 +237,7 @@
     <script type="text/javascript" src="js/parallax.js"></script>
     <script type="text/javascript" src="js/back-to-top.js"></script>
     <script type="text/javascript" src="js/meta-color.js"></script>
+    <script type="text/javascript" src="js/get-app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
     VanillaTilt.init(document.querySelector(".box"), {

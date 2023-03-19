@@ -1112,24 +1112,134 @@ input:active {
 
 
 
+/*GET APP MENU*/
+
+body.hide {
+    overflow: hidden;
+}
+
+.get-app-page {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(100px);
+    transition: 0.5s;
+    transform: scale(0);
+    z-index: 4;
+}
+
+.get-app-page.show {
+    transition: 0.5s;
+    transform: scale(1);
+    display: flex;
+}
+
+.navbar.hide,
+.wrapper.hide,
+.footer.hide,
+.back-to-top.hide {
+    transition: 0.3s;
+    transition-delay: 0.5s;
+    transform: scale(0);
+}
+
+.get-app.hide {
+    transform: scale(0);
+}
+
+.navbar.show,
+.wrapper.show,
+.footer.show,
+.back-to-top.show {
+    transition: 0.3s;
+    transition-delay: 0.3s;
+    transform: scale(1);
+}
+
+.close-popup {
+    display: flex;
+    position: absolute;
+    top: 1%;
+    right: 4%;
+    border: calc(2px + (4 - 2) * ((100vw - 320px) / (1920 - 320))) solid rgba(0, 0, 0, 0.5);
+    padding: calc(6px + (12 - 6) * ((100vw - 320px) / (1920 - 320))) calc(4px + (8 - 4) * ((100vw - 320px) / (1920 - 320)));
+    border-radius: calc(7px + (14 - 7) * ((100vw - 320px) / (1920 - 320)));
+    transition: 0.2s;
+}
+
+.close-popup-icon {
+    display: flex;
+    position: relative;
+    width: calc(26px + (36 - 26) * ((100vw - 320px) / (1200 - 320)));
+    height: calc(20px + (28 - 20) * ((100vw - 320px) / (1200 - 320)));
+}
+
+.close-popup-icon span {
+    transform: scale(0);
+    transition: all 0.3s ease 0s;
+}
+
+.close-popup-icon:before,
+.close-popup-icon:after {
+    content: '';
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    border-radius: 99px;
+    transition: all 0.3s ease 0s;
+}
+
+.close-popup-icon:before {
+    top: 0;
+}
+
+.close-popup-icon:after {
+    bottom: 0;
+}
+
+.close-popup-icon:before {
+    transform: rotate(45deg) translateY(-50%);
+    top: 50%;
+    margin-left: -3%;
+    margin-top: -1.5%;
+}
+
+.close-popup-icon:after {
+    transform: rotate(-45deg) translateY(50%);
+    bottom: 50%;
+    margin-left: -3%;
+    margin-bottom: -1.5%;
+}
+
+
+
 /*PSEUDO CLASSES*/
 
 .nav-link-button:hover,
 .nav-burger:hover,
 .market img:hover,
 .pay img:hover,
+#close-popup:hover,
 .nav-link-button:focus,
 .nav-burger:focus,
 .market img:focus,
 .pay img:focus,
-.inputs input:focus {
+.inputs input:focus,
+#close-popup:focus {
     border-color: #000;
 }
 
 .nav-link-button:active,
 .nav-burger:active,
 .market img:active,
-.pay img:active {
+.pay img:active,
+#close-popup:active {
     border-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -1154,8 +1264,15 @@ input:active {
 }
 
 .nav-burger:active .nav-menu:before,
-.nav-burger:active .nav-menu:after {
+.nav-burger:active .nav-menu:after,
+#close-popup:active .close-popup-icon:before,
+#close-popup:active .close-popup-icon:after {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+#close-popup:hover div:before,
+#close-popup:hover div:after {
+    background-color: #000;
 }
 
 
@@ -1818,24 +1935,38 @@ input:active {
         background-repeat: no-repeat;
     }
 
+    /*GET APP MENU*/
+
+    #close-popup {
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #close-popup div:before,
+    #close-popup div:after {
+        background-color: #000;
+    }
+
     /*PSEUDO CLASSES*/
 
     .nav-link-button:hover,
     .nav-burger:hover,
     .market img:hover,
     .pay img:hover,
+    #close-popup:hover,
     .nav-link-button:focus,
     .nav-burger:focus,
     .market img:focus,
     .pay img:focus,
-    .inputs input:focus {
+    .inputs input:focus,
+    #close-popup:focus {
         border-color: #000;
     }
 
     .nav-link-button:active,
     .nav-burger:active,
     .market img:active,
-    .pay img:active {
+    .pay img:active,
+    #close-popup:active {
         border-color: rgba(0, 0, 0, 0.5);
     }
 
@@ -1860,8 +1991,15 @@ input:active {
     }
 
     .nav-burger:active .nav-menu:before,
-    .nav-burger:active .nav-menu:after {
+    .nav-burger:active .nav-menu:after,
+    #close-popup:active .close-popup-icon:before,
+    #close-popup:active .close-popup-icon:after {
         background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #close-popup:hover div:before,
+    #close-popup:hover div:after {
+        background-color: #000;
     }
 
     @media (max-width: 1200px) {
@@ -2113,24 +2251,38 @@ input:active {
         background-repeat: no-repeat;
     }
 
+    /*GET APP MENU*/
+
+    #close-popup {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    #close-popup div:before,
+    #close-popup div:after {
+        background-color: #fff;
+    }
+
     /*PSEUDO CLASSES*/
 
     .nav-link-button:hover,
     .nav-burger:hover,
     .market img:hover,
     .pay img:hover,
+    #close-popup:hover,
     .nav-link-button:focus,
     .nav-burger:focus,
     .market img:focus,
     .pay img:focus,
-    .inputs input:focus {
+    .inputs input:focus,
+    #close-popup:focus {
         border-color: #fff;
     }
 
     .nav-link-button:active,
     .nav-burger:active,
     .market img:active,
-    .pay img:active {
+    .pay img:active,
+    #close-popup:active {
         border-color: rgba(255, 255, 255, 0.5);
     }
 
@@ -2155,8 +2307,15 @@ input:active {
     }
 
     .nav-burger:active .nav-menu:before,
-    .nav-burger:active .nav-menu:after {
+    .nav-burger:active .nav-menu:after,
+    #close-popup:active .close-popup-icon:before,
+    #close-popup:active .close-popup-icon:after {
         background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    #close-popup:hover div:before,
+    #close-popup:hover div:after {
+        background-color: #fff;
     }
 
     @media (max-width: 1200px) {
