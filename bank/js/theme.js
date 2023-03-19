@@ -2,8 +2,6 @@
 const image = document.getElementById("nav-logo-img");
 const appStore = document.getElementById("app-store");
 const googlePlay = document.getElementById("google-play");
-const appStorePopup = document.getElementById("app-store-popup");
-const googlePlayPopup = document.getElementById("google-play-popup");
 const applePay = document.getElementById("apple-pay");
 const googlePay = document.getElementById("google-pay");
 const device = document.getElementById("device");
@@ -14,13 +12,14 @@ const cards = document.getElementById("cards");
 const linkedin = document.getElementById("linkedin");
 const youtube = document.getElementById("youtube");
 const twitter = document.getElementById("twitter");
+const appStorePopup = document.getElementById("app-store-popup");
+const googlePlayPopup = document.getElementById("google-play-popup");
+const galaxyStorePopup = document.getElementById("galaxy-store-popup");
 
 var imagesToLoad = [
     //light theme images preload
     "images/app-store-top.svg",
     "images/google-play-top.svg",
-    "images/app-store-popup.svg",
-    "images/google-play-popup.svg",
     "images/cards.png",
     "images/apple-pay.svg",
     "images/google-pay.svg",
@@ -31,12 +30,13 @@ var imagesToLoad = [
     "images/linkedin.svg",
     "images/youtube.svg",
     "images/twitter.svg",
+    "images/app-store-popup.svg",
+    "images/google-play-popup.svg",
+    "images/galaxy-store-popup.svg",
 
     //dark theme images preload
     "images/app-store-dark-top.svg",
     "images/google-play-dark-top.svg",
-    "images/app-store-dark-popup.svg",
-    "images/google-play-dark-popup.svg",
     "images/cards-dark.png",
     "images/apple-pay-dark.svg",
     "images/google-pay-dark.svg",
@@ -47,6 +47,9 @@ var imagesToLoad = [
     "images/linkedin-dark.svg",
     "images/youtube-dark.svg",
     "images/twitter-dark.svg",
+    "images/app-store-dark-popup.svg",
+    "images/google-play-dark-popup.svg",
+    "images/galaxy-store-dark-popup.svg",
 ];
 
 var images = [];
@@ -65,9 +68,6 @@ function changeImagesToDarkMode() {
     appStore.setAttribute("src", "images/app-store-dark-top.svg");
     googlePlay.setAttribute("src", "images/google-play-dark-top.svg");
 
-    appStorePopup.setAttribute("src", "images/app-store-dark-popup.svg");
-    googlePlayPopup.setAttribute("src", "images/google-play-dark-popup.svg");
-
     cards.setAttribute("src", "images/cards-dark.png");
 
     applePay.setAttribute("src", "images/apple-pay-dark.svg");
@@ -82,6 +82,10 @@ function changeImagesToDarkMode() {
     linkedin.setAttribute("src", "images/linkedin-dark.svg");
     youtube.setAttribute("src", "images/youtube-dark.svg");
     twitter.setAttribute("src", "images/twitter-dark.svg");
+
+    appStorePopup.setAttribute("src", "images/app-store-dark-popup.svg");
+    googlePlayPopup.setAttribute("src", "images/google-play-dark-popup.svg");
+    galaxyStorePopup.setAttribute("src", "images/galaxy-store-dark-popup.svg");
 }
 
 function changeImagesToLightMode() {
@@ -89,9 +93,6 @@ function changeImagesToLightMode() {
 
     appStore.setAttribute("src", "images/app-store-top.svg");
     googlePlay.setAttribute("src", "images/google-play-top.svg");
-
-    appStorePopup.setAttribute("src", "images/app-store-popup.svg");
-    googlePlayPopup.setAttribute("src", "images/google-play-popup.svg");
 
     cards.setAttribute("src", "images/cards.png");
 
@@ -107,6 +108,10 @@ function changeImagesToLightMode() {
     linkedin.setAttribute("src", "images/linkedin.svg");
     youtube.setAttribute("src", "images/youtube.svg");
     twitter.setAttribute("src", "images/twitter.svg");
+
+    appStorePopup.setAttribute("src", "images/app-store-popup.svg");
+    googlePlayPopup.setAttribute("src", "images/google-play-popup.svg");
+    galaxyStorePopup.setAttribute("src", "images/galaxy-store-popup.svg");
 }
 
 //BUTTONS

@@ -9,22 +9,12 @@ var closePopup = document.querySelector(".close-popup");
 
 navButton.addEventListener("click", function() {
     getApp.classList.add("show");
-    navbar.classList.add("hide");
-    wrapper.classList.add("hide");
-    footer.classList.add("hide");
-    backToTop.classList.add("hide");
     body.classList.add("hide");
-
     getApp.classList.remove("hide");
 });
 
 closePopup.addEventListener("click", function() {
     getApp.classList.add("hide");
-    
-    getApp.classList.remove("show");
-    navbar.classList.remove("hide");
-    wrapper.classList.remove("hide");
-    footer.classList.remove("hide");
-    backToTop.classList.remove("hide");
     body.classList.remove("hide");
+    getApp.classList.remove("show");
 });

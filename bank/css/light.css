@@ -220,12 +220,12 @@ input:active {
 
 /*GET APP MENU*/
 
-#close-popup {
+.close-popup {
     border-color: rgba(0, 0, 0, 0.5);
 }
 
-#close-popup div:before,
-#close-popup div:after {
+.close-popup div:before,
+.close-popup div:after {
     background-color: #000;
 }
 
@@ -235,13 +235,13 @@ input:active {
 .nav-burger:hover,
 .market img:hover,
 .pay img:hover,
-#close-popup:hover,
+.close-popup:hover,
 .nav-link-button:focus,
 .nav-burger:focus,
 .market img:focus,
 .pay img:focus,
 .inputs input:focus,
-#close-popup:focus {
+.close-popup:focus {
     border-color: #000;
 }
 
@@ -249,7 +249,7 @@ input:active {
 .nav-burger:active,
 .market img:active,
 .pay img:active,
-#close-popup:active {
+.close-popup:active {
     border-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -275,13 +275,13 @@ input:active {
 
 .nav-burger:active .nav-menu:before,
 .nav-burger:active .nav-menu:after,
-#close-popup:active .close-popup-icon:before,
-#close-popup:active .close-popup-icon:after {
+.close-popup:active .close-popup-icon:before,
+.close-popup:active .close-popup-icon:after {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#close-popup:hover div:before,
-#close-popup:hover div:after {
+.close-popup:hover div:before,
+.close-popup:hover div:after {
     background-color: #000;
 }
 
