@@ -740,6 +740,18 @@ input:active {
     color: #000;
 }
 
+.submit-button {
+    font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 700;
+    border: 0;
+    background-color: #000;
+    color: #fff;
+    border-radius: calc(7px + (14 - 7) * ((100vw - 320px) / (1920 - 320)));
+    padding: calc(8px + (16 - 8) * ((100vw - 320px) / (1920 - 320))) calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
+    transition: 0.2s;
+    align-self: center;
+}
+
 
 
 /*FOOTER*/
@@ -949,6 +961,8 @@ input:active {
 
 
 /*CARD*/
+
+.data-right {}
 
 .box {
     position: relative;
@@ -1284,6 +1298,15 @@ body.hide {
     background-color: #000;
 }
 
+.submit-button:hover {
+    background-color: #101010;
+    transform: scale(1.1);
+}
+
+.submit-button:active {
+    background-color: #000;
+    transform: scale(0.9);
+}
 
 
 /*MEDIA REQUESTS*/
@@ -1496,11 +1519,16 @@ body.hide {
         justify-content: center;
         align-items: center;
         margin-right: 0;
-        margin-bottom: calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
+        order: 2;
     }
 
     .inputs {
         max-width: 80%;
+    }
+
+    .data-right {
+        order: 1;
+        margin-bottom: calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
     }
 
     .footer-section {
@@ -1905,6 +1933,11 @@ body.hide {
         color: #000;
     }
 
+    .submit-button {
+        background-color: #000;
+        color: #fff;
+    }
+
     /*FOOTER*/
 
     .footer {
@@ -2042,6 +2075,14 @@ body.hide {
 
     .close-popup:hover div:before,
     .close-popup:hover div:after {
+        background-color: #000;
+    }
+
+    .submit-button:hover {
+        background-color: #101010;
+    }
+
+    .submit-button:active {
         background-color: #000;
     }
 
@@ -2221,6 +2262,11 @@ body.hide {
         color: #fff;
     }
 
+    .submit-button {
+        background-color: #fff;
+        color: #000;
+    }
+
     /*FOOTER*/
 
     .footer {
@@ -2358,6 +2404,14 @@ body.hide {
 
     .close-popup:hover div:before,
     .close-popup:hover div:after {
+        background-color: #fff;
+    }
+
+    .submit-button:hover {
+        background-color: #f0f0f0;
+    }
+
+    .submit-button:active {
         background-color: #fff;
     }
 

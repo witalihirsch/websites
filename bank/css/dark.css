@@ -147,6 +147,11 @@ input:active {
     color: #fff;
 }
 
+.submit-button {
+    background-color: #fff;
+    color: #000;
+}
+
 /*FOOTER*/
 
 .footer {
@@ -286,6 +291,14 @@ input:active {
 
 .close-popup:hover div:before,
 .close-popup:hover div:after {
+    background-color: #fff;
+}
+
+.submit-button:hover {
+    background-color: #f0f0f0;
+}
+
+.submit-button:active {
     background-color: #fff;
 }
 
