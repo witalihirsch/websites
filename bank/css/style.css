@@ -1153,6 +1153,16 @@ body.hide {
     display: flex;
 }
 
+.wrapper.hide,
+.footer.hide,
+.nav.hide,
+.nav-logo.hide,
+.back-to-top.hide,
+.nav-burger.hide {
+    display: none;
+    transform: scale(0);
+}
+
 .get-app.hide {
     transform: scale(0);
 }
@@ -1459,7 +1469,9 @@ body.hide {
     }
 
     .nav-menu:before,
-    .nav-menu:after {
+    .nav-menu:after,
+    .close-popup-icon:before,
+    .close-popup-icon:after {
         height: 3px;
     }
 
@@ -1570,7 +1582,9 @@ body.hide {
     }
 
     .nav-menu:before,
-    .nav-menu:after {
+    .nav-menu:after,
+    .close-popup-icon:before,
+    .close-popup-icon:after {
         height: 2px;
     }
 
@@ -1755,7 +1769,9 @@ body.hide {
     }
 
     .nav-menu:before,
-    .nav-menu:after {
+    .nav-menu:after,
+    .close-popup-icon:before,
+    .close-popup-icon:after {
         height: 3px;
     }
 

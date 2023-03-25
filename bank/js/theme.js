@@ -249,8 +249,22 @@ function checkSystemColor() {
     }
 }
 
-window.onload = function() {
+function updateSystemColor() {
     checkSystemColor();
+
+    defaultButton.addEventListener("click", function() {
+        defaultButton.classList.add("checked");
+        defaultButton.classList.add("clicked");
+
+        lightButton.classList.remove("checked");
+        darkButton.classList.remove("checked");
+        lightButton.classList.remove("clicked");
+        darkButton.classList.remove("clicked");
+    });
+
+    if (!defaultButton.classList.contains("checked") && !lightButton.classList.contains("checked") && !darkButton.classList.contains("checked")) {
+        defaultButton.click();
+    }
 
     if (defaultButton.classList.contains("checked")) {
         defaultButton.classList.add("clicked");
@@ -265,4 +279,9 @@ window.onload = function() {
     }
 }
 
-window.onload = checkSystemColor;
+
+window.onload = function() {
+    updateSystemColor();
+}
+
+updateSystemColor();
