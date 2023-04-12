@@ -9,9 +9,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="yes">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/splide.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="shortcut icon" type="image/svg" href="img/icon/favicon.svg">
-    <link rel="stylesheet" href="css/splide.min.css">
     <title>Groceries</title>
 </head>
 
@@ -61,10 +61,10 @@
     <section class="menu">
         <div class="menu__row container">
             <div class="menu__body">
-                <div class="menu__column">
+                <div class="menu__column menu__column-categories">
                     <div class="column__body">
+                        <h2 class="categories__title">Categories</h2>
                         <ul class="column__list">
-                            <h2>Categories</h2>
                             <li><a class="menu__link link" href="#">Sales</a></li>
                             <li><a class="menu__link menu__link-active link link-active" href="#">Fruits</a></li>
                             <li><a class="menu__link link" href="#">Vegetables</a></li>
@@ -184,10 +184,10 @@
                 <!--<a class="menu__arrow-right menu__arrow">
                     <img src="img/icon/arrow.svg" alt="Arrow Right">
                 </a>-->
-                <div class="menu__column">
+                <div class="menu__column menu__column-filter">
                     <div class="column__body">
+                        <h2 class="filter__title">Filter</h2>
                         <div class="column__filter">
-                            <h2>Filter</h2>
                             <h3>Price</h3>
                             <div class="filter__input">
                                 <input type="number" name="filterFrom" placeholder="from">
@@ -213,6 +213,7 @@
         </div>
     </section>
     <script type="text/javascript" src="js/burger.js"></script>
+    <script type="text/javascript" src="js/accordion.js"></script>
     <script src="js/splide.min.js"></script>
     <script>
     var splide = new Splide('.splide', {

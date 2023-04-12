@@ -470,18 +470,18 @@ body {
 
 .column__body {}
 
-.column__list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.column__list h2 {
+.categories__title {
     margin: 0 0 var(--size50) 0;
 
     font-weight: 600;
     font-size: var(--size36);
     line-height: var(--size30);
+}
+
+.column__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .column__list li {
@@ -524,6 +524,14 @@ body {
 
 .menu__arrow-right img {
     transform: rotate(180deg);
+}
+
+
+
+/*SPLIDE*/
+
+.splide {
+    width: calc(200px + (1150 - 200) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .menu__grid {
@@ -650,7 +658,7 @@ body {
     align-items: flex-end;
 }
 
-.column__filter h2 {
+.filter__title {
     margin: 0 0 var(--size50) 0;
 
     font-weight: 600;
@@ -815,6 +823,77 @@ input:checked+.slider:before {
     }
 }
 
+@media (max-width: 830px) {
+    .menu__body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu__column {
+        flex: 0 1 auto;
+    }
+
+    .menu__column-categories {
+        order: 1;
+    }
+
+    .categories__title {
+        font-size: var(--size60);
+        line-height: var(--size60);
+        cursor: pointer;
+    }
+
+    .column__list {
+        align-items: center;
+        display: none;
+        margin: 0 0 var(--size50) 0;
+    }
+
+    .column__list.active {
+        display: flex;
+    }
+
+    .menu__link {
+        align-items: center;
+        font-size: var(--size40);
+        line-height: var(--size40);
+    }
+
+    .splide {
+        order: 3;
+        width: calc(200px + (730 - 200) * ((100vw - 320px) / (830 - 320)));
+    }
+
+    .menu__column-filter {
+        order: 2;
+    }
+
+    .column__filter {
+        align-items: center;
+        display: none;
+        margin: 0 0 var(--size50) 0;
+    }
+
+    .column__filter.active {
+        display: flex;
+    }
+
+    .filter__title {
+        font-size: var(--size60);
+        line-height: var(--size60);
+        text-align: center;
+    }
+
+    .column__filter h3 {
+        font-size: var(--size40);
+        line-height: var(--size40);
+    }
+
+    .filter__input input {
+        width: 300px
+    }
+}
+
 @media (max-width: 767px) {
     body.lock {
         overflow: hidden;
@@ -921,12 +1000,8 @@ input:checked+.slider:before {
 
         font-size: var(--size36);
     }
-}
 
-
-
-/*SPLIDE*/
-
-.splide {
-    width: calc(200px + (1150 - 200) * ((100vw - 320px) / (1920 - 320)));
+    .menu__arrow {
+        display: none;
+    }
 }
