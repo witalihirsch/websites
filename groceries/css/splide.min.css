@@ -1,0 +1,53 @@
+.splide__list {
+    backface-visibility: hidden;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.splide {
+    visibility: hidden;
+    display: flex;
+}
+
+.splide.is-initialized,
+.splide.is-rendered {
+    visibility: visible;
+}
+
+.splide__slide {
+    backface-visibility: hidden;
+    flex-shrink: 0;
+}
+
+.splide__sr {
+    clip: rect(0 0 0 0);
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.splide__track {
+    overflow: hidden;
+}
+
+.splide__arrow {
+    min-width: var(--size80);
+    min-height: var(--size80);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin: 0 var(--size30);
+
+    background-color: #fff;
+    box-shadow: 0px 0px var(--size20) rgba(0, 0, 0, 0.15);
+}
+
+.splide__arrow--next img {
+    transform: scaleX(-1);
+}
