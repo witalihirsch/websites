@@ -1025,3 +1025,59 @@ input:checked+.slider:before {
         display: none;
     }
 }
+
+@media (hover: none) {
+    .link:hover {
+        color: #101010;
+    }
+
+    .link:hover:after {
+        width: 0;
+    }
+
+    .link-active:hover:after {
+        width: var(--size36);
+    }
+
+    .item__sign-up:hover {
+        background-color: #407536;
+    }
+
+    .item__order:hover {
+        background-color: #407536;
+
+        transform: translateY(0px);
+    }
+
+    .item__order:active {
+        background-color: #101010;
+
+        transition: 0.2s;
+        transform: translateY(0px);
+    }
+
+    .item__download:hover {
+        transform: translateY(0px);
+    }
+
+    .menu__arrow:hover {
+        transform: scale(1);
+        box-shadow: 0px 0px var(--size24) rgba(0, 0, 0, 0.15);
+    }
+
+    .menu__card:hover {
+        transform: scale(1);
+        box-shadow: 0px 0px var(--size20) rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 767px) {
+        .header__link:hover:after {
+            width: 0;
+        }
+
+        .header__link-active:hover:after {
+            width: var(--size100);
+        }
+    }
+
+}
