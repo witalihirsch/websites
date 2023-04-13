@@ -1,3 +1,7 @@
-if ('ontouchstart' in window || navigator.maxTouchPoints) {
-    document.querySelectorAll('*:hover').forEach(el => el.classList.remove(':hover'));
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+
+if (isTouchDevice) {
+    document.addEventListener('touchstart', function() {
+        document.querySelectorAll('*:hover').forEach(node => node.classList.remove('hover'));
+    });
 }
