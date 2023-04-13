@@ -33,21 +33,3 @@
 .splide__track {
     overflow: hidden;
 }
-
-.splide__arrow {
-    min-width: var(--size80);
-    min-height: var(--size80);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    margin: 0 var(--size30);
-
-    background-color: #fff;
-    box-shadow: 0px 0px var(--size20) rgba(0, 0, 0, 0.15);
-}
-
-.splide__arrow--next img {
-    transform: scaleX(-1);
-}

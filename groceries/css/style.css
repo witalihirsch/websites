@@ -63,6 +63,21 @@ a:visited {
     text-decoration: none;
 }
 
+button,
+button:hover,
+button:active,
+input,
+label,
+textarea,
+select,
+a,
+div {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    outline: none;
+}
+
 ul li {
     list-style: none;
 }
@@ -89,7 +104,11 @@ h6 {
 
 img,
 a,
-button {
+button,
+p,
+h1,
+h2,
+h3 {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -540,7 +559,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: 1fr;
     column-gap: var(--size20);
-    row-gap: var(--size40);
+    row-gap: var(--size30);
     justify-content: center;
     margin: var(--size24);
 }
@@ -689,7 +708,7 @@ body {
     padding: 0 var(--size30);
 
     background-color: #fff;
-    border: var(--size2) solid #000;
+    border: var(--size2) solid #101010;
 
     font-weight: 600;
     font-size: var(--size24);
@@ -719,6 +738,7 @@ body {
     justify-content: center;
 
     background-color: #ececec;
+    color: #101010;
 
     font-weight: 600;
     font-size: var(--size24);
