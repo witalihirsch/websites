@@ -9,9 +9,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="yes">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/splide.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="shortcut icon" type="image/svg" href="img/icon/favicon.svg">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Groceries</title>
 </head>
 
@@ -21,10 +21,10 @@
             <a class="header__logo" href="#" ontouchstart="">Groceries</a>
             <nav>
                 <ul class="header__list">
-                    <li><a class="header__link header__link-active link link-active" href="#" ontouchstart="">Home</a></li>
-                    <li><a class="header__link link" href="#" ontouchstart="">Menu</a></li>
-                    <li><a class="header__link link" href="#" ontouchstart="">About Us</a></li>
-                    <li><a class="header__link link" href="#" ontouchstart="">Contact</a></li>
+                    <li><a href="#landing" id="link-home" class="header__link header__link-active link" ontouchstart="">Home</a></li>
+                    <li><a href="#menu" id="link-menu" class="header__link link" ontouchstart="">Menu</a></li>
+                    <li><a href="#about" class="header__link link" ontouchstart="">About Us</a></li>
+                    <li><a href="#contact" class="header__link link" ontouchstart="">Contact</a></li>
                 </ul>
             </nav>
             <div class="header__item">
@@ -38,7 +38,7 @@
             </div>
         </div>
     </header>
-    <section class="landing">
+    <section id="landing" class="landing">
         <div class="landing__row container">
             <div class="landing__body">
                 <h1 class="landing__title">Let’s now shop For daily food & necessary.</h1>
@@ -58,238 +58,1208 @@
             </div>
         </div>
     </section>
-    <section class="menu">
+    <section id="menu" class="menu">
         <div class="menu__row container">
             <div class="menu__body">
                 <div class="menu__column menu__column-categories">
                     <div class="column__body">
                         <h2 class="categories__title">Categories</h2>
-                        <ul class="column__list">
-                            <li><a class="menu__link link" href="#">Sales</a></li>
-                            <li><a class="menu__link menu__link-active link link-active" href="#">Fruits</a></li>
-                            <li><a class="menu__link link" href="#">Vegetables</a></li>
-                            <li><a class="menu__link link" href="#">Greenery</a></li>
-                            <li><a class="menu__link link" href="#">Cereals</a></li>
-                            <li><a class="menu__link link" href="#">Pasta</a></li>
-                            <li><a class="menu__link link" href="#">Dairy</a></li>
-                            <li><a class="menu__link link" href="#">Beverages</a></li>
-                            <li><a class="menu__link link" href="#">Bread</a></li>
-                            <li><a class="menu__link link" href="#">Sweets</a></li>
+                        <ul id="menu__links" class="column__list">
+                            <li><a href="#sales" id="sales-link" class="menu__link menu__link-active link link-active" ontouchstart="">Sales</a></li>
+                            <li><a href="#fruits" id="fruits-link" class="menu__link link" href="#" ontouchstart="">Fruits</a></li>
+                            <li><a href="#vegetables" id="vegetables-link" class="menu__link link" ontouchstart="">Vegetables</a></li>
+                            <li><a href="#greenery" id="greenery-link" class="menu__link link" ontouchstart="">Greenery</a></li>
+                            <li><a href="#" id="cereals-link" class="menu__link link" ontouchstart="">Cereals</a></li>
+                            <li><a href="#" id="pasta-link" class="menu__link link" ontouchstart="">Pasta</a></li>
+                            <li><a href="#" id="dairy-link" class="menu__link link" ontouchstart="">Dairy</a></li>
+                            <li><a href="#" id="beverages-link" class="menu__link link" ontouchstart="">Beverages</a></li>
+                            <li><a href="#" id="bread-link" class="menu__link link" ontouchstart="">Bread</a></li>
+                            <li><a href="#" id="sweets-link" class="menu__link link" ontouchstart="">Sweets</a></li>
                         </ul>
                     </div>
                 </div>
-                <!--<a class="menu__arrow-left menu__arrow">
-                    <img src="img/icon/arrow.svg" alt="Arrow Left">
-                </a>-->
-                <div id="splide" class="splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="menu__grid">
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/orange.png" alt="Product" draggable="false">
-                                                </div>
-                                                <p class="card__title">Orange, 1 pc</p>
-                                                <p class="card__price">$3</p>
-                                                <div class="card__input">
-                                                    <div class="input__body">
-                                                        <div class="input__icon">
-                                                            <img src="img/icon/minus.svg" alt="Minus">
-                                                        </div>
-                                                        <div class="input__count">1</div>
-                                                        <div class="input__icon">
-                                                            <img src="img/icon/plus.svg" alt="Plus">
-                                                        </div>
+                <div class="swiper__container">
+                    <div class="swiper__body">
+                        <div id="sales" class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="menu__grid">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/orange.png" alt="Product" draggable="false">
                                                     </div>
-                                                    <a class="input__add" href="#">Add</a>
+                                                    <p class="card__title">Orange, 1 pc</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/apple.png" alt="Product" draggable="false">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/apple.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Apple, 1 pc</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
-                                                <p class="card__title">Apple, 1 pc</p>
-                                                <p class="card__price">$2</p>
-                                                <div class="card__input"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/banana.png" alt="Product" draggable="false">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/banana.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Banana, 1 pc</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
-                                                <p class="card__title">Banana, 1 pc</p>
-                                                <p class="card__price">$2</p>
-                                                <div class="card__input"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/kiwi.png" alt="Product" draggable="false">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/kiwi.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Kiwi, 1 pc</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
-                                                <p class="card__title">Kiwi, 1 pc</p>
-                                                <p class="card__price">$3</p>
-                                                <div class="card__input"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/mango.png" alt="Product" draggable="false">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/mango.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Mango, 1 pc</p>
+                                                    <p class="card__price">$5</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
-                                                <p class="card__title">Mango, 1 pc</p>
-                                                <p class="card__price">$5</p>
-                                                <div class="card__input"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/pineapple.png " alt="Product" draggable="false">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/pineapple.png " alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Pineapple, 1 pc</p>
+                                                    <p class="card__price">$6</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
-                                                <p class="card__title">Pineapple, 1 pc</p>
-                                                <p class="card__price">$6</p>
-                                                <div class="card__input"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="menu__grid">
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/orange.png" alt="Product" draggable="false">
-                                                </div>
-                                                <p class="card__title">Orange, 1 pc</p>
-                                                <p class="card__price">$3</p>
-                                                <div class="card__input">
-                                                    <div class="input__body">
-                                                        <div class="input__icon">
-                                                            <img src="img/icon/minus.svg" alt="Minus">
-                                                        </div>
-                                                        <div class="input__count">1</div>
-                                                        <div class="input__icon">
-                                                            <img src="img/icon/plus.svg" alt="Plus">
-                                                        </div>
+                                <div class="swiper-slide">
+                                    <div class="menu__grid">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/orange.png" alt="Product" draggable="false">
                                                     </div>
-                                                    <a class="input__add" href="#">Add</a>
+                                                    <p class="card__title">Orange, 1 pc</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/apple.png" alt="Product" draggable="false">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/apple.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Apple, 1 pc</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
-                                                <p class="card__title">Apple, 1 pc</p>
-                                                <p class="card__price">$2</p>
-                                                <div class="card__input"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/banana.png" alt="Product" draggable="false">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/banana.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Banana, 1 pc</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
-                                                <p class="card__title">Banana, 1 pc</p>
-                                                <p class="card__price">$2</p>
-                                                <div class="card__input"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/mango.png" alt="Product" draggable="false">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/kiwi.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Kiwi, 1 pc</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
-                                                <p class="card__title">Mango, 1 pc</p>
-                                                <p class="card__price">$5</p>
-                                                <div class="card__input"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/kiwi.png" alt="Product" draggable="false">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/mango.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Mango, 1 pc</p>
+                                                    <p class="card__price">$5</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
-                                                <p class="card__title">Kiwi, 1 pc</p>
-                                                <p class="card__price">$3</p>
-                                                <div class="card__input"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="menu__card">
-                                        <div class="card__body">
-                                            <div class="card__column">
-                                                <div class="card__img">
-                                                    <img src="img/image/pineapple.png " alt="Product" draggable="false">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/pineapple.png " alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Pineapple, 1 pc</p>
+                                                    <p class="card__price">$6</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
                                                 </div>
-                                                <p class="card__title">Pineapple, 1 pc</p>
-                                                <p class="card__price">$6</p>
-                                                <div class="card__input"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+                        <div id="fruits" class="swiper mySwiper" style="display: none;">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="menu__grid">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/orange.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Orange, 1 pc</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/apple.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Apple, 1 pc</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/banana.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Banana, 1 pc</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/kiwi.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Kiwi, 1 pc</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/mango.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Mango, 1 pc</p>
+                                                    <p class="card__price">$5</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/pineapple.png " alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Pineapple, 1 pc</p>
+                                                    <p class="card__price">$6</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="menu__grid">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/orange.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Orange, 1 pc</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/apple.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Apple, 1 pc</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/banana.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Banana, 1 pc</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/kiwi.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Kiwi, 1 pc</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/mango.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Mango, 1 pc</p>
+                                                    <p class="card__price">$5</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/pineapple.png " alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Pineapple, 1 pc</p>
+                                                    <p class="card__price">$6</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="vegetables" class="swiper mySwiper" style="display: none;">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="menu__grid">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/broccoli.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Broccoli, 1 kg</p>
+                                                    <p class="card__price">$4</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/potato.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Potato, 1 kg</p>
+                                                    <p class="card__price">$1</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/onion.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Onion, 1 kg</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/tomato.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Tomato, 1 kg</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/carrot.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Carrot, 1 kg</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/cucumber.png " alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Cucumber, 1 kg</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="menu__grid">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/broccoli.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Broccoli, 1 kg</p>
+                                                    <p class="card__price">$4</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/potato.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Potato, 1 kg</p>
+                                                    <p class="card__price">$1</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/onion.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Onion, 1 kg</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/tomato.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Tomato, 1 kg</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/carrot.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Carrot, 1 kg</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/cucumber.png " alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Cucumber, 1 kg</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="greenery" class="swiper mySwiper" style="display: none;">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div id="greenery" class="menu__grid">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/basil.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Basil, 200 g</p>
+                                                    <p class="card__price">$4</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/arugula.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Arugula, 200 g</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/celery.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Celery, 200 g</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/parsley.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Parsley, 200 g</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/rosemary.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Rosemary, 200 g</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/thyme.png " alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Thyme, 200 g</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div id="greenery" class="menu__grid">
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/basil.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Basil, 200 g</p>
+                                                    <p class="card__price">$4</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/arugula.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Arugula, 200 g</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/celery.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Celery, 200 g</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/parsley.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Parsley, 200 g</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/rosemary.png" alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Rosemary, 200 g</p>
+                                                    <p class="card__price">$3</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__card">
+                                            <div class="card__body">
+                                                <div class="card__column">
+                                                    <div class="card__img">
+                                                        <img src="img/image/thyme.png " alt="Product" draggable="false">
+                                                    </div>
+                                                    <p class="card__title">Thyme, 200 g</p>
+                                                    <p class="card__price">$2</p>
+                                                    <div class="card__input">
+                                                        <div class="input__body">
+                                                            <button data-input-stepper-decrease class="input__btn" ontouchstart="">
+                                                                <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                            </button>
+                                                            <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                            <button data-input-stepper-increase class="input__btn" ontouchstart="">
+                                                                <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                            </button>
+                                                        </div>
+                                                        <button class="input__add" ontouchstart="">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="splide__arrows splide__arrows--ltr">
-                        <button class="splide__arrow splide__arrow--prev menu__arrow-left menu__arrow" type="button" aria-label="Previous slide" aria-controls="splide-track">
-                            <img src="img/icon/arrow.svg" alt="Arrow Left">
-                        </button>
-                        <button class="splide__arrow splide__arrow--next menu__arrow-right menu__arrow" type="button" aria-label="Next slide" aria-controls="splide-track">
-                            <img src="img/icon/arrow.svg" alt="Arrow Right">
-                        </button>
+                    <div class="menu__arrows">
+                        <div class="menu__arrow menu__arrow-prev" ontouchstart="">
+                            <img src="img/icon/arrow.svg" alt="Arrow Prev">
+                        </div>
+                        <div class="menu__arrow menu__arrow-next" ontouchstart="">
+                            <img src="img/icon/arrow.svg" alt="Arrow Next">
+                        </div>
                     </div>
                 </div>
-                <!--<a class="menu__arrow-right menu__arrow">
-                    <img src="img/icon/arrow.svg" alt="Arrow Right">
-                </a>-->
                 <div class="menu__column menu__column-filter">
                     <div class="column__body">
                         <h2 class="filter__title">Filter</h2>
                         <div class="column__filter">
                             <h3>Price</h3>
                             <div class="filter__input">
-                                <input type="number" name="filterFrom" placeholder="from">
-                                <input type="number" name="filterTo" placeholder="to">
+                                <input type="number" name="filterFrom" placeholder="from" min="1" max="999" step="1" value="1">
+                                <input type="number" name="filterTo" placeholder="to" min="1" max="999" step="1" value="999">
                             </div>
                             <h3>Sort by</h3>
                             <div class="filter__item">
-                                <button class="item__btn item__btn-active">popularity</button>
-                                <button class="item__btn">a-z</button>
-                                <button class="item__btn">z-a</button>
+                                <button class="item__btn item__btn-active" ontouchstart="">popularity</button>
+                                <button class="item__btn" ontouchstart="">a-z</button>
+                                <button class="item__btn" ontouchstart="">z-a</button>
                             </div>
                             <div class="filter__discount">
                                 <h3>Discount</h3>
-                                <label class="filter__switch">
+                                <label class="filter__switch" ontouchstart="">
                                     <input type="checkbox">
                                     <span class="slider"></span>
                                 </label>
@@ -302,16 +1272,26 @@
     </section>
     <script type="text/javascript" src="js/burger.js"></script>
     <script type="text/javascript" src="js/accordion.js"></script>
-    <script src="js/splide.min.js"></script>
+    <script type="text/javascript" src="js/buttons.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.input-stepper.js"></script>
+    <script type="text/javascript" src="js/categories.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-    var splide = new Splide('.splide', {
-        type: 'loop',
-        perPage: 1,
-        perMove: 1,
-        interval: 3000,
+    $(function() {
+        $('.input__body').inputStepper();
     });
-
-    splide.mount();
+    </script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: ".menu__arrow-next",
+            prevEl: ".menu__arrow-prev",
+        },
+    });
     </script>
 </body>
 
