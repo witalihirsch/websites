@@ -12,8 +12,10 @@ window.addEventListener('scroll', () => {
 
         // check if current scroll position is within the target section
         if (currentScrollPos >= targetTop && currentScrollPos < targetTop + targetHeight) {
+            link.classList.add('header__link-active');
             link.classList.add('link-active');
         } else {
+            link.classList.remove('header__link-active');
             link.classList.remove('link-active');
         }
     });
