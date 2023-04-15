@@ -424,7 +424,7 @@ body {
 }
 
 .landing__img {
-    width: calc(335px + (670 - 335) * ((100vw - 320px) / (1920 - 320)));
+    width: calc(320px + (670 - 320) * ((100vw - 320px) / (1920 - 320)));
     display: flex;
     flex: 0 0 50%;
 }
@@ -457,6 +457,7 @@ body {
 .menu__column {
     display: flex;
     flex: 0 1 230px;
+    max-width: 100%;
 }
 
 .column__body {
@@ -885,7 +886,7 @@ input:checked+.slider:before {
     }
 
     .column__body {
-        margin: 0 100px;
+        margin: 0 auto;
         width: calc(200px + (400 - 200) * ((100vw - 320px) / (1920 - 320)));
         align-items: center;
     }
