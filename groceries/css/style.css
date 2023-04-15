@@ -1166,6 +1166,7 @@ input:checked+.slider:before {
     }
 }
 
+/*
 @media (hover: none) {
     .link:hover {
         color: #101010;
@@ -1200,11 +1201,6 @@ input:checked+.slider:before {
         transform: translateY(0px);
     }
 
-    .menu__arrow:hover {
-        transform: scale(1);
-        box-shadow: 0px 0px var(--size24) rgba(0, 0, 0, 0.15);
-    }
-
     .menu__card:hover {
         transform: scale(1);
         box-shadow: 0px 0px var(--size20) rgba(0, 0, 0, 0.15);
@@ -1224,4 +1220,12 @@ input:checked+.slider:before {
         }
     }
 
+}*/
+
+
+@media (hover: none) {
+    .menu__card:hover {
+        transform: scale(1);
+        box-shadow: 0px 0px var(--size20) rgba(0, 0, 0, 0.15);
+    }
 }
