@@ -110,7 +110,8 @@ button,
 p,
 h1,
 h2,
-h3 {
+h3,
+div {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -ms-user-select: none;
