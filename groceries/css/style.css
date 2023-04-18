@@ -310,7 +310,7 @@ body.clicked {
 }
 
 .header__sign-up a:active {
-    background-color: #101010;
+    background-color: #294824;
 }
 
 .header__item {
@@ -528,7 +528,23 @@ body.clicked {
     letter-spacing: 0.05em;
     white-space: nowrap;
 
-    transition: 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.item__download:active {
+    background-color: #101010;
+    border: var(--size2) solid #101010;
+    color: #fff;
+
+    transition: 0.2s;
+    transform: translateY(0px);
+}
+
+.item__download:active #apple,
+.item__download:focus #apple {
+    content: url("../img/icon/apple-hover.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .item__download div {
@@ -749,7 +765,7 @@ body.clicked {
     border-radius: 100px;
     justify-content: space-between;
 
-    background-color: #ececec;
+    background-color: rgba(0, 0, 0, 0.08);
 
     overflow: hidden;
 }
@@ -776,6 +792,11 @@ body.clicked {
 
 .input__btn img {
     max-width: 100%;
+}
+
+#increase,
+#decrease {
+    background-color: transparent;
 }
 
 .input__btn #plus,
@@ -903,7 +924,7 @@ body.clicked {
     align-items: center;
     justify-content: center;
 
-    background-color: #ececec;
+    background-color: rgba(0, 0, 0, 0.08);
     color: #101010;
 
     font-weight: 600;
@@ -953,8 +974,7 @@ body.clicked {
     bottom: 0;
     background-color: #101010;
     border-radius: 100px;
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .slider:before {
@@ -966,8 +986,7 @@ body.clicked {
     bottom: var(--size5);
     background-color: white;
     border-radius: 50%;
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: 0.4s;
 }
 
 input:checked+.slider {
@@ -1173,7 +1192,7 @@ input:checked+.slider:before {
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
     color: #969696;
 
     font-size: var(--size24);
@@ -1182,10 +1201,9 @@ input:checked+.slider:before {
 .input :is(input:focus, input:valid)~label {
     top: 0;
     transform: translate(-50%, -50%) scale(0.8);
-    margin: 0em;
-    margin-left: 0;
-    padding: 0.4em;
+    padding: var(--size8);
     background-color: #fff;
+    border-radius: 100px;
 }
 
 .input__row .input {
@@ -1542,10 +1560,26 @@ input:checked+.slider:before {
     }
 
     .item__download:hover {
+        background-color: #101010;
+        border: var(--size2) solid #101010;
+        color: #fff;
+
         transform: translateY(-5px);
     }
 
+    .item__download:hover #apple,
+    .item__download:active #apple,
+    .item__download:focus #apple {
+        content: url("../img/icon/apple-hover.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
     .item__download:active {
+        background-color: #101010;
+        border: var(--size2) solid #101010;
+        color: #fff;
+
         transition: 0.2s;
         transform: translateY(0px);
     }
@@ -1606,5 +1640,13 @@ input:checked+.slider:before {
 
     .input__add:active {
         background-color: #294824;
+    }
+
+    .item__btn:hover {
+        background-color: rgba(0, 0, 0, 0.12);
+    }
+
+    .item__btn-active:hover {
+        background-color: #101010;
     }
 }
