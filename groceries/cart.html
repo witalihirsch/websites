@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scalee=1.0, user-scalable=0">
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" type="image/svg" href="img/icon/favicon.svg">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
+    <script type="text/javascript" src="js/preload.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Philosopher:wght@700&display=swap" rel="stylesheet">
+    <title>Groceries</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__body">
+            <a class="header__logo" href="#" ontouchstart="">Groceries</a>
+            <div class="header__row">
+                <div class="header__empty"></div>
+                <nav>
+                    <ul class="header__list">
+                        <li><a href="index.html#landing" id="link-home" class="header__link link" ontouchstart="">Home</a></li>
+                        <li><a href="index.html#menu" id="link-menu" class="header__link link" ontouchstart="">Menu</a></li>
+                        <!--<li><a href="#about" class="header__link link" ontouchstart="">About Us</a></li>
+                        <li><a href="#contact" class="header__link link" ontouchstart="">Contact</a></li>-->
+                    </ul>
+                </nav>
+                <div class="header__sign-up">
+                    <a href="#" ontouchstart="">Sign Up</a>
+                </div>
+            </div>
+            <div class="header__item">
+                <div class="item__column">
+                    <a class="item__cart" href="#" ontouchstart="">
+                        <img id="item__cart-img" src="img/icon/cart-selected.svg" alt="Cart">
+                    </a>
+                    <div class="item__tooltip">Checkout cart</div>
+                </div>
+                <div class="header__burger">
+                    <a class="item__burger" ontouchstart="">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="cart">
+        <div class="cart__row container">
+            <div class="cart__body">
+                <div class="cart__sum">
+                    <h3>Your cart:</h3>
+                    <div class="cart__swiper">
+                        <div class="swiper__container-cart">
+                            <div class="swiper__body swiper__body-cart">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper swiper-wrapper-cart">
+                                        <div class="swiper-slide swiper-slide-cart">
+                                            <div class="menu__card">
+                                                <div class="card__body">
+                                                    <div class="card__column">
+                                                        <div class="card__img">
+                                                            <img src="img/image/basil.png" alt="Product" draggable="false">
+                                                        </div>
+                                                        <p class="card__title">Basil, 200 g</p>
+                                                        <p class="card__price">$4</p>
+                                                        <div class="card__input">
+                                                            <div class="input__body">
+                                                                <button id="decrease" class="input__btn" ontouchstart="">
+                                                                    <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                                </button>
+                                                                <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                                <button id="increase" class="input__btn" ontouchstart="">
+                                                                    <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                                </button>
+                                                            </div>
+                                                            <button class="input__add">Add</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-cart">
+                                            <div class="menu__card">
+                                                <div class="card__body">
+                                                    <div class="card__column">
+                                                        <div class="card__img">
+                                                            <img src="img/image/lasagna.png" alt="Product" draggable="false">
+                                                        </div>
+                                                        <p class="card__title">Lasagna, 400 g</p>
+                                                        <p class="card__price">$2</p>
+                                                        <div class="card__input">
+                                                            <div class="input__body">
+                                                                <button id="decrease" class="input__btn" ontouchstart="">
+                                                                    <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                                </button>
+                                                                <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                                <button id="increase" class="input__btn" ontouchstart="">
+                                                                    <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                                </button>
+                                                            </div>
+                                                            <button class="input__add">Add</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-cart">
+                                            <div class="menu__card">
+                                                <div class="card__body">
+                                                    <div class="card__column">
+                                                        <div class="card__img">
+                                                            <img src="img/image/tomato.png" alt="Product" draggable="false">
+                                                        </div>
+                                                        <p class="card__title">Tomato, 1 kg</p>
+                                                        <p class="card__price">$3</p>
+                                                        <div class="card__input">
+                                                            <div class="input__body">
+                                                                <button id="decrease" class="input__btn" ontouchstart="">
+                                                                    <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                                </button>
+                                                                <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                                <button id="increase" class="input__btn" ontouchstart="">
+                                                                    <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                                </button>
+                                                            </div>
+                                                            <button class="input__add">Add</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-cart">
+                                            <div class="menu__card">
+                                                <div class="card__body">
+                                                    <div class="card__column">
+                                                        <div class="card__img">
+                                                            <img src="img/image/carrot.png" alt="Product" draggable="false">
+                                                        </div>
+                                                        <p class="card__title">Carrot, 1 kg</p>
+                                                        <p class="card__price">$2</p>
+                                                        <div class="card__input">
+                                                            <div class="input__body">
+                                                                <button id="decrease" class="input__btn" ontouchstart="">
+                                                                    <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                                </button>
+                                                                <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                                <button id="increase" class="input__btn" ontouchstart="">
+                                                                    <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                                </button>
+                                                            </div>
+                                                            <button class="input__add">Add</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-cart">
+                                            <div class="menu__card">
+                                                <div class="card__body">
+                                                    <div class="card__column">
+                                                        <div class="card__img">
+                                                            <img src="img/image/celery.png" alt="Product" draggable="false">
+                                                        </div>
+                                                        <p class="card__title">Celery, 200 g</p>
+                                                        <p class="card__price">$3</p>
+                                                        <div class="card__input">
+                                                            <div class="input__body">
+                                                                <button id="decrease" class="input__btn" ontouchstart="">
+                                                                    <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                                </button>
+                                                                <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                                <button id="increase" class="input__btn" ontouchstart="">
+                                                                    <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                                </button>
+                                                            </div>
+                                                            <button class="input__add">Add</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-cart">
+                                            <div class="menu__card">
+                                                <div class="card__body">
+                                                    <div class="card__column">
+                                                        <div class="card__img">
+                                                            <img src="img/image/cheese.png" alt="Product" draggable="false">
+                                                        </div>
+                                                        <p class="card__title">Cheese, 200 g</p>
+                                                        <p class="card__price">$6</p>
+                                                        <div class="card__input">
+                                                            <div class="input__body">
+                                                                <button id="decrease" class="input__btn" ontouchstart="">
+                                                                    <img id="minus" src="img/icon/minus.svg" alt="Minus">
+                                                                </button>
+                                                                <input class="input__count" type="number" min="1" max="99" step="1" value="1" readonly>
+                                                                <button id="increase" class="input__btn" ontouchstart="">
+                                                                    <img id="plus" src="img/icon/plus.svg" alt="Plus">
+                                                                </button>
+                                                            </div>
+                                                            <button class="input__add">Add</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu__arrows">
+                                <div class="menu__arrow menu__arrow-prev" ontouchstart="">
+                                    <img src="img/icon/arrow.svg" alt="Arrow Prev">
+                                </div>
+                                <div class="menu__arrow menu__arrow-next" ontouchstart="">
+                                    <img src="img/icon/arrow.svg" alt="Arrow Next">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__price">
+                        <div class="price__column">
+                            <div class="column__item">
+                                <h3>Amount</h3>
+                                <div class="item__amount item">$20</div>
+                            </div>
+                            <div class="column__item">
+                                <h3>Discount</h3>
+                                <div class="item__discount item">$3</div>
+                            </div>
+                        </div>
+                        <div class="price__row">
+                            <div class="row__item">
+                                <h3>Total Sum</h3>
+                                <div class="item__total item">$17</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart__order">
+                    <h3>Your data:</h3>
+                    <div class="cart__input">
+                        <div class="input__column">
+                            <div class="input">
+                                <input type="text" name="userName" required="">
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="userEmail" required="">
+                                <label for="name">Email</label>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="userAddress" required="">
+                                <label for="name">Address</label>
+                            </div>
+                            <div class="input">
+                                <input id="card-number" type="tel" name="userCardNumber" required="" maxlength="19">
+                                <label for="name">Card Number</label>
+                            </div>
+                        </div>
+                        <div class="input__row">
+                            <div class="input">
+                                <input id="card-expire" type="tel" name="userCardDate" required="" maxlength="5">
+                                <label for="name">MM/YY</label>
+                            </div>
+                            <div class="input">
+                                <input class="card-cvv" type="tel" name="userCardCVV" required="" pattern="\d*" maxlength="3">
+                                <label for="name">CVV</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__btn">
+                        <a>Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="js/burger.js"></script>
+    <script type="text/javascript" src="js/buttons.js"></script>
+    <script type="text/javascript" src="js/input.js"></script>
+    <script type="text/javascript" src="js/inputStepper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".menu__arrow-next",
+            prevEl: ".menu__arrow-prev",
+        },
+    });
+    </script>
+</body>
+
+</html>
