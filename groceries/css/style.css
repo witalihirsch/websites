@@ -128,10 +128,24 @@ input[type=number] {
 }
 
 /* Override the default background color for selected autocomplete items */
-input::-moz-selection { background-color: transparent; }
-input::selection { background-color: transparent; }
-input:focus::-moz-selection { background-color: transparent; }
-input:focus::selection { background-color: transparent; }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-moz-autofill,
+input:-moz-autofill:hover,
+input:-moz-autofill:focus,
+input:-moz-autofill:active,
+input:-ms-autofill,
+input:-ms-autofill:hover,
+input:-ms-autofill:focus,
+input:-ms-autofill:active,
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:autofill:active {
+    box-shadow: 0 0 0 30px white inset !important;
+}
 
 ::selection {
     background-color: #101010;
@@ -316,7 +330,8 @@ body.clicked {
     transition: 0.2s;
 }
 
-.header__sign-up a:active, .cart__btn a:active {
+.header__sign-up a:active,
+.cart__btn a:active {
     background-color: #294824;
 }
 
@@ -1277,6 +1292,10 @@ input:checked+.slider:before {
         width: 40px;
     }
 
+    .input__btn {
+        width: 30px;
+    }
+
     .menu__arrow img {
         width: 40px;
     }
@@ -1713,11 +1732,13 @@ input:checked+.slider:before {
         width: var(--size24);
     }
 
-    .header__sign-up a:hover, .cart__btn a:hover {
+    .header__sign-up a:hover,
+    .cart__btn a:hover {
         background-color: #101010;
     }
 
-    .header__sign-up a:active, .cart__btn a:active {
+    .header__sign-up a:active,
+    .cart__btn a:active {
         background-color: #294824;
     }
 
