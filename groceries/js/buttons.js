@@ -1,16 +1,12 @@
 const headerLinks = document.querySelectorAll('nav a[href^="#"]');
 
-window.addEventListener('scroll', () => {
+function highlightLink() {
     const currentScrollPos = window.pageYOffset;
-
-    // loop through each header link
     headerLinks.forEach(link => {
         const href = link.getAttribute('href');
         const target = document.querySelector(href);
         const targetTop = target.offsetTop;
         const targetHeight = target.offsetHeight;
-
-        // check if current scroll position is within the target section
         if (currentScrollPos >= targetTop && currentScrollPos < targetTop + targetHeight) {
             link.classList.add('header__link-active');
             link.classList.add('link-active');
@@ -19,7 +15,10 @@ window.addEventListener('scroll', () => {
             link.classList.remove('link-active');
         }
     });
-});
+}
+
+window.addEventListener('scroll', highlightLink);
+window.addEventListener('load', highlightLink);
 
 
 
