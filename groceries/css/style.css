@@ -1655,7 +1655,7 @@ input:checked+.slider:before {
 
     .header__sign-up {
         justify-content: center;
-        margin: 0 0 var(--size20) 0;
+        margin: var(--size40) 0 var(--size20) 0;
         z-index: 5;
     }
 
